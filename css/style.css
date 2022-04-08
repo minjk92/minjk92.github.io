@@ -129,7 +129,7 @@
 
 .ev_main_con01 h2{font-weight: 700;font-size: 3.750vw;line-height: 5.417vw;letter-spacing: -0.005em;}
 .ev_main_con01 h3{display: inline-block;width: 13.542vw;max-width: 260px;margin-top: 0.625vw;}
-.ev_main_con01 h3 img{width: 100%;}
+.ev_main_con01 h3 img{width:70%;}
 .ev_main_con01 ul{font-size: 0;margin-top: 2.708vw;}
 .ev_main_con01 ul li{display: inline-block;}
 .ev_main_con01 ul li a{display: block;width: 8.854vw;height: 3.021vw;margin: 0 0.521vw;line-height: 3.021vw;text-align: center;background: rgba(255, 255, 255, 0.84);border-radius: 0.417vw}

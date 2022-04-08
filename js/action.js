@@ -48,6 +48,12 @@ $(document).ready(function () {
                 if (scrollTop >= widthVw_pc) {
                     $('.title_box').addClass('scroll');
                     console.log(titleVw);
+                    if (titleVw > 372.1953125) {
+                        console.log("372.1953125 high");
+                        $('#nav').attr('style', "display:block;");
+                    } else if (titleVw < 374.1953125) {
+                        $('#nav').attr('style', "display:none;");
+                    }
                 } else {
                     $('.title_box').removeClass('scroll');
                 }

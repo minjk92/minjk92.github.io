@@ -61,7 +61,30 @@ $(document).ready(function () {
         }).resize();
     });
     
-    // 선곡리스트
+    /* // 0415 수정 */
+    // 선곡리스트 - 배경
+    var mockUpSwiper = new Swiper('.phone_mockup', {
+        autoplay: {
+            delay: 1480,
+            disableOnInteraction: false,
+        },
+        
+        effect : 'fade',
+
+        slidesPerView: 1,
+        centeredSlides: true,
+
+        loop: true,
+        speed: 1000,
+        noSwiping: true,
+        touchRatio: 0,
+        preventClicksPropagation: false,
+        preventClicks: false,
+        allowTouchMove: false,
+        
+    });
+    /* 0415 수정 // */
+    // 선곡리스트 - 앨범
     var listSwiper = new Swiper('.ev_con_img_box', {
         autoplay: {
             delay: 1500,
@@ -142,55 +165,26 @@ $(document).ready(function () {
 
 
     // num 정리
-    var $subBox01 = $('.full_box .full_con01 .substance_box');
-    var $subBox01St = $('.full_box .full_con01 .substance_box strong');
-    var $subBox01H = $subBox01St.height();
-    $subBox01.css("height", $subBox01H);
-    $subBox01.css("margin-top", -$subBox01H / 2);
-
-    var $subBox02 = $('.full_box .full_con02 .substance_box');
-    var $subBox02St = $('.full_box .full_con02 .substance_box strong');
-    var $subBox02H = $subBox02St.height();
-    $subBox02.css("height", $subBox02H);
-    $subBox02.css("margin-top", -$subBox02H / 2);
-
-    var $subBox03 = $('.full_box .full_con03 .substance_box');
-    var $subBox03St = $('.full_box .full_con03 .substance_box strong');
-    var $subBox03H = $subBox03St.height();
-    $subBox03.css("height", $subBox03H);
-    $subBox03.css("margin-top", -$subBox03H / 2);
-
-    var $subBox04 = $('.full_box .full_con04 .substance_box');
-    var $subBox04St = $('.full_box .full_con04 .substance_box strong');
-    var $subBox04H = $subBox04St.height();
-    $subBox04.css("height", $subBox04H);
-    $subBox04.css("margin-top", -$subBox04H / 2);
+    /* // 0415 수정 */
+    for(var i=0;i<=4;i++){
+        var $subBox = $('.full_box .full_con0'+i+' .substance_box');
+        var $subBoxSt = $('.full_box .full_con0'+i+' .substance_box strong');
+        var $subBoxH = $subBoxSt.height();
+        $subBox.css("height", $subBoxH);
+        $subBox.css("margin-top", -$subBoxH / 2);
+    }
 
     $(window).resize(function () {
-        var $subBox01 = $('.full_box .full_con01 .substance_box');
-        var $subBox01St = $('.full_box .full_con01 .substance_box strong');
-        var $subBox01H = $subBox01St.height();
-        $subBox01.css("height", $subBox01H);
-        $subBox01.css("margin-top", -$subBox01H / 2);
-
-        var $subBox02 = $('.full_box .full_con02 .substance_box');
-        var $subBox02St = $('.full_box .full_con02 .substance_box strong');
-        var $subBox02H = $subBox02St.height();
-        $subBox02.css("height", $subBox02H);
-        $subBox02.css("margin-top", -$subBox02H / 2);
-
-        var $subBox03 = $('.full_box .full_con03 .substance_box');
-        var $subBox03St = $('.full_box .full_con03 .substance_box strong');
-        var $subBox03H = $subBox03St.height();
-        $subBox03.css("height", $subBox03H);
-        $subBox03.css("margin-top", -$subBox03H / 2);
-
-        var $subBox04 = $('.full_box .full_con04 .substance_box');
-        var $subBox04St = $('.full_box .full_con04 .substance_box strong');
-        var $subBox04H = $subBox04St.height();
-        $subBox04.css("height", $subBox04H);
-        $subBox04.css("margin-top", -$subBox04H / 2);
+        for(var i=0;i<=4;i++){
+            var $subBox = $('.full_box .full_con0'+i+' .substance_box');
+            var $subBoxSt = $('.full_box .full_con0'+i+' .substance_box strong');
+            var $subBoxH = $subBoxSt.height();
+            $subBox.css("height", $subBoxH);
+            $subBox.css("margin-top", -$subBoxH / 2);
+        }
+        
     });
+    /* 0415 수정 // */
 
     
     $(window).resize(function () {

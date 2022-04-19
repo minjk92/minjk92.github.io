@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight:300;
+    src: url("../fonts/NotoSansKR-Light.otf") format("OpenType"),
+            url("../fonts/notosanskr-light-webfont.woff") format("woff"),
+            url("../fonts/notosanskr-light-webfont.woff2") format("woff2");
+    unicode-range:U+AC00-D7A3;
+  }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-weight:400;
+    src: url("../fonts/NotoSansKR-Regular.otf") format("OpenType"),
+            url("../fonts/notosanskr-regular-webfont.woff") format("woff"),
+            url("../fonts/notosanskr-regular-webfont.woff2") format("woff2");
+    unicode-range:U+AC00-D7A3;
+  }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-weight:500;
+    src: url("../fonts/NotoSansKR-Medium.otf") format("OpenType"),
+            url("../fonts/notosanskr-medium-webfont.woff") format("woff"),
+            url("../fonts/notosanskr-medium-webfont.woff2") format("woff2");
+    unicode-range:U+AC00-D7A3;
+  }
+  /*@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight:700;
+    src: url("../fonts/NotoSansKR-Bold.otf") format("OpenType"),
+            url("../fonts/notosanskr-bold-webfont.woff") format("woff"),
+            url("../fonts/notosanskr-bold-webfont.woff2") format("woff2");
+    unicode-range:U+AC00-D7A3;
+  }*/
+
+
+@font-face {
+    font-family: 'LaTo';
+    font-weight:300;
+    src: url("../fonts/Lato-Light.ttf") format("TrueType"),
+            url("../fonts/lato-light-webfont.woff") format("woff"),
+            url("../fonts/lato-light-webfont.woff2") format("woff2");
+    unicode-range:U+0041-005A,U+0061-007A/*영문대소문자*/, U+0030-0039/*숫자*/,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E/*특수문자*/;
+  }
+  @font-face {
+    font-family: 'LaTo';
+    font-weight:400;
+    src: url("../fonts/Lato-Regular.ttf") format("TrueType"),
+    url("../fonts/lato-regular-webfont.woff") format("woff"),
+    url("../fonts/lato-regular-webfont.woff2") format("woff2");
+    unicode-range:U+0041-005A,U+0061-007A, U+0030-0039,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+  }
+  /*@font-face {
+    font-family: 'LaTo';
+    font-weight:700;
+    src: url("../fonts/Lato-Bold.ttf") format("TrueType"),
+    url("../fonts/lato-bold-webfont.woff") format("woff"),
+    url("../fonts/lato-bold-webfont.woff2") format("woff2");
+    unicode-range:U+0041-005A,U+0061-007A, U+0030-0039,U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+  }*/
+  

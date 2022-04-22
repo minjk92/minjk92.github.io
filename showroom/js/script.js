@@ -507,7 +507,7 @@ $(document).ready(function(){
         $(".two_depth > a").removeClass('on');
         $(this).addClass('on');
     });
-    
+
 
     /*문의하기 팝업*/ 
     $(".inquiry_popup").hide();
@@ -596,9 +596,15 @@ $(document).ready(function(){
         $(this).children('p').toggleClass('active');
     
     });
-    $(".types ul li").children('span').hide();
-    $(".types ul li").click(function(){
-        $(this).children('span').toggle();
+    // $(".types ul li").children('span').hide();
+    // $(".types ul li").click(function(){
+    //     $(this).children('span').toggle();
+    // });
+
+
+    $(".types > ul").click(function(){
+        $(".types > ul").addClass('on');
+        $(this).removeClass('on');
     });
 
         

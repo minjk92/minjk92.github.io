@@ -27,12 +27,11 @@ body {width:100%; margin:0;padding:0;word-spacing:normal;background-color:#fffff
   width:100%; max-width:600px;margin: 0 auto;background-color:#fff; align-items: center; padding-top:8%;
 }
 
-.outer img{
-  margin:0 auto; margin-bottom: 24px;
+.logo{ margin-bottom: 80px;
 }
 
 .presentation img{
-  margin-bottom:80px;
+  margin:0 auto; margin-bottom:32px;
 }
 
 

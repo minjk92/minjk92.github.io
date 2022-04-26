@@ -24,8 +24,17 @@ body {width:100%; margin:0;padding:0;word-spacing:normal;background-color:#fffff
   -webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#fff;
 }
 .outer{
-  width:100%;max-width:600px;margin: 0 auto;background-color:#fff; align-items: center; padding-top:220px;
+  width:100%; max-width:600px;margin: 0 auto;background-color:#fff; align-items: center; padding-top:8%;
 }
+
+.outer img{
+  margin:0 auto; margin-bottom: 24px;
+}
+
+.presentation img{
+  margin-bottom:80px;
+}
+
 
 .presentation{
   width:100%;border:0;border-spacing:0;font-size:0; align-content: center;
@@ -44,7 +53,19 @@ h1.ex_title{
   letter-spacing: -0.02em;
   word-break:keep-all;
 }
+
 .presentation ul li{text-align:center; margin-bottom: 12px;}
-.presentation ul li.btn_browser {
-  display:block; padding:13px 18px; background-color: #F5F5F5;color:#151515;font-size:14px;font-weight:400;line-height: 17px;letter-spacing: -0.02em;text-decoration: none;font-family: 'Noto Sans KR', sans-serif;border-radius: 8px;
+.presentation ul li p {
+  padding:13px 18px; background-color: #F5F5F5;color:#151515;font-size:14px;font-weight:400;line-height: 22px;letter-spacing: -0.02em;text-decoration: none;font-family: 'Noto Sans KR', sans-serif;border-radius: 8px;
 }
+
+.presentation ul.btn_browser {
+  display: flex; justify-content: space-between; width: 40%; align-items: center; margin: 0 auto;
+}
+
+.presentation ul.btn_browser li{
+  width: 46px;
+  height: 46px;
+  padding-left: 12px;
+}
+

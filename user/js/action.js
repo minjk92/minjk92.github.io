@@ -203,6 +203,16 @@ $(document).ready(function () {
         }
     }).resize();
 
+      /*myspace_4_3*/
+      $(window).scroll(function(){
+        var scrollT = $(window).scrollTop();
+
+        if(scrollT > 700) {
+           $("#nav .gnb > ul").addClass('active');
+        } else{
+            $("#nav .gnb > ul").removeClass('active');
+        }
+    });
 
 
 

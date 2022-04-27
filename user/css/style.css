@@ -27,7 +27,8 @@
 
 #nav{float: right; display:none;}
 #nav .gnb {}
-#nav .gnb ul{font-size: 0;height: 80px;}
+#nav .gnb ul{display:none; font-size: 0;height: 80px;}
+#nav .gnb ul.active{display: block; transition: ease-in-out 1s;}
 #nav .gnb ul li{display: inline-block;height: 80px;line-height: 80px;font-size: 0;vertical-align: top;}
 #nav .gnb ul li a{display: inline-block;height: 80px;letter-spacing: -0.005em;}
 #nav .gnb ul li.gnb_login a{font-size: 16px;}

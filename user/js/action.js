@@ -203,7 +203,7 @@ $(document).ready(function () {
         }
     }).resize();
 
-      /*myspace_4_3*/
+      /* Scrolltop gnbmenu */
       $(window).scroll(function(){
         var scrollT = $(window).scrollTop();
 

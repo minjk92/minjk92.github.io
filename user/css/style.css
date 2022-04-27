@@ -48,7 +48,8 @@
 #footer .ft_inr .ft_top .ft_gnb li a.point{font-weight: 700;color: #fff;}
 #footer .ft_inr .ft_top .ft_sns{float: right;font-size: 0;}
 #footer .ft_inr .ft_top .ft_sns li{display: inline-block;}
-#footer .ft_inr .ft_top .ft_sns li a{display: block;width: 20px;height: 46px;margin-left: 20px;vertical-align: top;line-height: 44px;border: 0;}
+#footer .ft_inr .ft_top .ft_sns li a{display: block; margin-left: 20px;vertical-align: top;line-height: 44px;border: 0;}
+#footer .ft_inr .ft_top .ft_sns li a:hover {opacity: 0.7; transition: all 0.5s;}
 #footer .ft_inr .ft_top .ft_sns li:first-child a{margin-left: 0;}
 #footer .ft_inr .ft_top .ft_sns li a img{width: 100%;opacity: .6;vertical-align: middle;}
 
@@ -61,12 +62,13 @@
 #footer .ft_inr .ft_info address .corp_num{display: inline-block;}
 #footer .ft_inr .ft_info .copyright{position: absolute;bottom: 0;right: 0;vertical-align: bottom;font-weight: 400;font-size: 16px;line-height: 19px;opacity: 0.6;letter-spacing: -0.005em;}
 
+
 @media screen and (max-width: 1010px) { 
     .hd_inr{margin: 0 4.444vw;}
     #nav .gnb ul li.gnb_join{margin-left: 4.063vw;}
     
     #footer .ft_inr{margin: 0 4.444vw;}
-    #footer .ft_inr .ft_top .ft_sns{float: none;text-align: center;}
+    #footer .ft_inr .ft_top .ft_sns{float: right;text-align: center;}
     #footer .ft_inr .ft_info{height: auto;}
     #footer .ft_inr .ft_info address{position: static;}
     #footer .ft_inr .ft_info .copyright{position: static;margin-top: 4.444vw;text-align: left;}
@@ -84,7 +86,8 @@
     #nav .gnb ul li.gnb_join a{width: 18.611vw;height: 7.778vw;font-size: 3.611vw;line-height: 7.778vw;}
     
     #footer .ft_inr{padding: 6.667vw 0 8.889vw;}
-    #footer .ft_inr .ft_top .ft_sns li a{width: 5.556vw;min-width: 20px;height: 5.556vw;min-height: 20px;line-height: 5.556vw;}
+    #footer .ft_inr .ft_top .ft_sns{float: none;text-align: center; margin:4vw 0 10vw 0;}
+    #footer .ft_inr .ft_top .ft_sns li a{width:24vw; min-width: 24px;height: 5.556vw;min-height: 20px;line-height: 5.556vw;}
     #footer .ft_inr .ft_top .ft_gnb{float: none;margin-top: 5.556vw;}
     #footer .ft_inr .ft_top .ft_gnb li a{font-size: 3.889vw;line-height: 5.556vw;margin-bottom: 2.222vw;margin-right: 5.556vw;}
     #footer .ft_inr .ft_info{margin-top: 4.444vw;}

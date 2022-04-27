@@ -43,7 +43,7 @@ h1.ex_title{
 }
 
 .presentation ul li{text-align:center; margin-bottom: 12px;}
-.presentation ul li p {padding:13px 18px; background-color: #F5F5F5;color:#151515;font-size:14px;font-weight:400;line-height: 22px;letter-spacing: -0.02em;text-decoration: none;font-family: 'Noto Sans KR', sans-serif;border-radius: 8px;}
+.presentation ul li p {padding:13px 10px; background-color: #F5F5F5;color:#151515;font-size:14px;font-weight:400;line-height: 22px;letter-spacing: -0.02em;text-decoration: none;font-family: 'Noto Sans KR', sans-serif;border-radius: 8px;}
 
 .presentation ul.btn_browser {
   display: flex;

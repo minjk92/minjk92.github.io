@@ -162,6 +162,17 @@ body {width:100%; background:#ffffff;}
    margin-left: -4.1em;
   }
 
+  /* agree */
+.agree_box {width:100%; display:flex; justify-content:flex-start; align-items:center;padding:18px 0;border-radius:8px;cursor:pointer;}
+.agree_box p {color:#222; font-weight:500; font-size:14px;margin-left:12px;} 
+.agree_txt {margin-top:14px;}
+.agree_txt ul {width:100%;display:flex; justify-content:space-between; align-items:center;padding:8px 20px;}
+.agree_txt ul li {color:#222; font-size:16px;cursor:pointer;}
+.agree_txt ul li p {margin-left:16px;}
+.agree_txt ul li div {display:flex; justify-content:flex-start; align-items:center;}
+.agree_txt ul li:nth-child(2) {display:flex; justify-content:flex-end; align-items:center;width:20px; height:20px; background:transparent;}
+
+
 }
 
 
@@ -236,6 +247,7 @@ body {width:100%; background:#ffffff;}
   .types h4 {font-size:16px; font-weight: 400; color:#fff;}
   .types > p {margin-bottom:20px; color:#fff;font-size:18px; font-weight:500; }
   .types ul {width:100%; height:22vw; line-height: 22vw; padding:0 24px; text-align: right; border-radius: 4%;/*display:grid;  grid-template-columns: 1fr 1fr 1fr;column-gap:6%;*/}
+  .types ul.on {width:100%; height:22vw; line-height: 22vw; padding:0 24px; text-align: right; border-radius: 4%; border:1px solid #FF2D55;}
   .types ul p {position:absolute; bottom:-30px; left:50%;transform:translateX(-50%);color:#151515; font-size:14px; font-weight:500;white-space: nowrap;}
   .types_bottom {position:fixed; background:#151515;padding-top:10px;}
   .types_bottom > div p {margin:0; margin-left:8px;}

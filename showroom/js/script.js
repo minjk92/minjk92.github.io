@@ -83,9 +83,9 @@ $(document).ready(function(){
         var $this = $(this);
         $this.find(">img").attr("src", function(index, attr){
             if(attr.match('_off')){
-                return attr.replace("_off.png", "_active.png");
+                return attr.replace("_off.svg", "_active.svg");
             }else {
-                return attr.replace("_active.png", "_off.png");
+                return attr.replace("_active.svg", "_off.svg");
             }
         });
     });
@@ -95,9 +95,9 @@ $(document).ready(function(){
         var $this = $(this);
         $this.find(">img").attr("src", function(index, attr){
             if(attr.match('_off')){
-                return attr.replace("_off.png", "_active.png");
+                return attr.replace("_off.svg", "_active.svg");
             }else {
-                return attr.replace("_active.png", "_off.png");
+                return attr.replace("_active.svg", "_off.svg");
             }
         });
     });
@@ -602,10 +602,10 @@ $(document).ready(function(){
     // });
 
 
-    $(".types > ul").click(function(){
-        $(".types > ul").addClass('on');
-        $(this).removeClass('on');
-    });
+    // $(".types > ul:nth-child(1)").click(function(){
+    //     $(".types > ul").addClass('on');
+    //     $(this).removeClass('on');
+    // });
 
         
     /*space_4_2*/  

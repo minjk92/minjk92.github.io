@@ -112,6 +112,17 @@ body {width:100%; background:#ffffff;}
   margin-left: -4.1em;
 }
 
+  /* agree */
+  .agree_box {width:100%; display:flex; justify-content:flex-start; align-items:center;padding:18px 0;border-radius:8px;cursor:pointer;}
+  .agree_box p {color:#222; font-weight:500; font-size:14px;margin-left:12px;} 
+  .agree_txt {margin-top:14px;}
+  .agree_txt ul {width:100%;display:flex; justify-content:space-between; align-items:center;padding:8px 20px;}
+  .agree_txt ul li {color:#222; font-size:16px;cursor:pointer;}
+  .agree_txt ul li p {margin-left:16px;}
+  .agree_txt ul li div {display:flex; justify-content:flex-start; align-items:center;}
+  .agree_txt ul li:nth-child(2) {display:flex; justify-content:flex-end; align-items:center;width:20px; height:20px; background:transparent;}
+  
+
 
 @media all and (max-width:1700px) {}
 @media all and (max-width:1440px){}

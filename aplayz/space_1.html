@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <link rel="stylesheet" href="css/content.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="space_pc">
+
+            <div class="space_upload alert">
+                <div class="space_upload_box alert_box">
+                    <p>등록 중인 스페이스가 저장되었습니다.<br>
+                        언제든 마이스페이스에서 이어서 등록이 가능합니다😊
+                    </p>
+                    <button>확인</button>
+                </div>
+            </div>
+            <div class="time_modal modal open_time">
+                <div class="time_modal_box modal_box">
+                    <ul class="time_modal_title modal_title">
+                        <li><p>09:30부터</p></li>
+                        
+                    </ul>
+                    <div class="select_box">
+                        <div class="select-box-area">
+                            <div class="label select-box">00 시</div>
+                            <div class="select-box-dropDown">
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="select-box-area">
+                            <div class="label select-box">00 분</div>
+                            <div class="select-box-dropDown"> 
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button id="prev_btn">취소</button>
+                        <button>적용</button>
+                    </div>
+                </div>
+            </div>
+            <div class="time_modal modal close_time">
+                <div class="time_modal_box modal_box">
+                    <ul class="time_modal_title modal_title">
+                        <li><p>22:30까지</p></li>
+                        
+                    </ul>
+                    <div class="select_box">
+                        <div class="select-box-area">
+                            <div class="label select-box">00 시</div>
+                            <div class="select-box-dropDown">
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="select-box-area">
+                            <div class="label select-box">00 분</div>
+                            <div class="select-box-dropDown"> 
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button id="prev_btn">취소</button>
+                        <button>적용</button>
+                    </div>
+                </div>
+            </div>
+            <div class="store_search_modal modal">
+                <div class="store_search_box modal_box">
+                    <div class="st_search_title modal_title">
+                        <h2>매장명으로 검색</h2>
+                        <div class="modal_close_btn">
+                            <img src="img/close_btn.png" alt="">
+                        </div>
+                    </div>
+                    <div class="search_input">
+                        <input type="text" placeholder="매장명으로 검색해주세요">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" fill="white"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="store_txt">
+                        <p>투썸플레이스 강남점<br><span>서울특별시 강남구 강남대로 382</span></p>
+                        <p>투썸플레이스 강남점<br><span>서울특별시 강남구 강남대로 382</span></p>
+                        <p>투썸플레이스 강남점<br><span>서울특별시 강남구 강남대로 382</span></p>
+                    </div>
+                </div>
+            </div>
+    
+            <header class="header space">
+                <div class="header_box">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/suv_logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </header>
+        
+            <section class="main registration">
+                <div class="main_box fade-up">
+                    <div class="main_box_title">
+                        <h1>스페이스 등록</h1>
+                        <div id="space_upload_ing_btn">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.81055 7.39387L16.8109 0.393555L18.8105 2.39324L11.8102 9.39355L18.8105 16.3939L16.8109 18.3936L9.81055 11.3932L2.81023 18.3936L0.810547 16.3939L7.81086 9.39355L0.810547 2.39324L2.81023 0.393555L9.81055 7.39387Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="myspace_content_form bt_pd">
+                        <div class="form_text">
+                            <h3>매장정보</h3>
+                        </div>
+                        <div class="pagnation">
+                            <span></span>
+                            <span style="width:12.5%"></span>
+                        </div>
+                        <form>
+                            <label>매장명 <span>*</span>
+                                <div>
+                                    <input type="text" placeholder="매장명을 검색해주세요.">
+                                    <div class="input_btn">
+                                        <p id="store_search">매장검색</p>
+                                        <p>직접입력</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <label>매장주소 <span>*</span>
+                                <div>
+                                    <input type="text">
+                                    <input type="text" placeholder="상세주소를 입력해주세요.">
+                                </div>
+                            </label>
+                            <label id="tel">연락처
+                                <div>
+                                    <input type="tel" placeholder="매장 연락처를  - 없이 입력해주세요.">
+                                </div>
+                            </label>
+                            <label>사업자등록번호
+                                <div>
+                                    <input type="tel" placeholder="사업자등록번호를  - 없이 입력해주세요.">
+                                    <p class="btn_type">확인</p>
+                                </div>
+                            </label>
+                            <div>
+                                <label>업종 <span>*</span></label>
+                                <div class="select_box">
+                                    <div class="select-box-area">
+                                        <div class="label select-box">대분류</div>
+                                        <div class="select-box-dropDown">
+                                            <ul class="optionList">
+                                                <li class="optionItem"><p>카페</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>음식점</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>주점</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>병원</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>생활/편의</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>숙박</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>기타</p><img src="img/space_check_none.png"></li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                    <div class="select-box-area">
+                                        <div class="label select-box">소분류</div>
+                                        <div class="select-box-dropDown"> 
+                                            <ul class="optionList">
+                                                <li class="optionItem"><p>일반카페</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>베이커리 카페</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>북카페</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>키즈카페</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>스터디카페</p><img src="img/space_check_none.png"></li>
+                                                <li class="optionItem"><p>전통차</p><img src="img/space_check_none.png"></li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label>영업시간 <span>*</span>
+                                <div class="set_clock">
+                                    <div class="start_clock start_clock1">
+                                        <p>09:30</p>
+                                    </div>
+                                    ~
+                                    <div class="end_clock end_clock1">
+                                        <p>23:30</p>
+                                    </div>
+                                </div>
+                            </label> 
+                        </form>
+                        <div class="form_bottom space_1">
+                            <div class="form_bottom_box">
+                                <div>
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.636 16.828L13.686 21.778L12.272 20.364L18.636 14L25 20.364L23.586 21.778L18.636 16.828Z" fill="white"/>
+                                    </svg>
+                                    <div>
+                                        <p>럭셔리</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="prev_btn">이전</button>
+                                    <button id="next_btn">다음</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="mo">다음(1/4)</button>
+            </section>
+    
+        </div>
+        <div class="space_mo">
+            <div class="back_dim"></div>
+
+            <div class="space_upload alert">
+                <div class="space_upload_box alert_box">
+                    <p>등록 중인 스페이스가 저장되었습니다.<br>
+                        언제든 마이스페이스에서 이어서 등록이 가능합니다 😊
+                    </p>
+                    <button>확인</button>
+                </div>
+            </div>
+            <div class="time_modal_box modal_box open_time2">
+                <!--<div class="time_modal_title modal_title">
+                    <h2>9:30 부터</h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0007 10.5862L16.9507 5.63623L18.3647 7.05023L13.4147 12.0002L18.3647 16.9502L16.9507 18.3642L12.0007 13.4142L7.05072 18.3642L5.63672 16.9502L10.5867 12.0002L5.63672 7.05023L7.05072 5.63623L12.0007 10.5862Z" fill="white"/>
+                    </svg>
+                </div>-->
+                <div class="select_box">
+                    <div class="select-box-area">
+                        <div class="label select-box">00 시</div>
+                        <div class="select-box-dropDown">
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="select-box-area">
+                        <div class="label select-box">00 분</div>
+                        <div class="select-box-dropDown"> 
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_bottom modal_bottom_btn">
+                    <button id="m_form_btn">확인</button>
+                </div>
+            </div>
+
+
+            <div class="time_modal_box modal_box close_time2">
+                <!--<div class="time_modal_title modal_title">
+                    <h2>23:00 부터</h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0007 10.5862L16.9507 5.63623L18.3647 7.05023L13.4147 12.0002L18.3647 16.9502L16.9507 18.3642L12.0007 13.4142L7.05072 18.3642L5.63672 16.9502L10.5867 12.0002L5.63672 7.05023L7.05072 5.63623L12.0007 10.5862Z" fill="white"/>
+                    </svg>
+                </div>-->
+                <div class="select_box">
+                    <div class="select-box-area">
+                        <div class="label select-box">00 시</div>
+                        <div class="select-box-dropDown">
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="select-box-area">
+                        <div class="label select-box">00 분</div>
+                        <div class="select-box-dropDown"> 
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_bottom modal_bottom_btn">
+                    <button id="m_form_btn">확인</button>
+                </div>
+            </div>
+            
+            <div class="store_search_modal modal">
+                <div class="store_search_box modal_box">
+                    <div class="st_search_title modal_title">
+                        <h2>매장검색</h2>
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 7.55012L16.0003 0.549805L18 2.54949L10.9997 9.5498L18 16.5501L16.0003 18.5498L9 11.5495L1.99969 18.5498L0 16.5501L7.00031 9.5498L0 2.54949L1.99969 0.549805L9 7.55012Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="search_input">
+                        <input type="text" placeholder="매장명으로 검색해주세요">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" fill="white"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="store_txt">
+                        <p>투썸플레이스 강남점<br><span>서울특별시 강남구 강남대로 382</span></p>
+                        <p>투썸플레이스 강남점<br><span>서울특별시 강남구 강남대로 382</span></p>
+                        <p>투썸플레이스 강남점<br><span>서울특별시 강남구 강남대로 382</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mo_space_header">
+                <div class="mo_header_box">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z" fill="white"/>
+                    </svg>     
+                    <h2>스페이스 등록</h2>
+                    <div id="space_upload_ing_btn1">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.00023 5.58672L11.9502 0.636719L13.3642 2.05072L8.41423 7.00072L13.3642 11.9507L11.9502 13.3647L7.00023 8.41472L2.05023 13.3647L0.63623 11.9507L5.58623 7.00072L0.63623 2.05072L2.05023 0.636719L7.00023 5.58672Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="pagnation">
+                    <span></span>
+                    <span style="width:12.5%"></span>
+                </div>
+            </div>
+
+            
+
+            <section class="main registration">
+                <div class="main_box">
+                    <div class="myspace_content_form">
+                        <div class="form_text">
+                            <h3>매장정보</h3>
+                        </div>
+                        <form>
+                            <label>매장명 <span>*</span>
+                                <div>
+                                    <input type="text" placeholder="매장명을 검색해주세요.">
+                                    <div class="input_btn">
+                                        <p id="store_search1">매장검색</p>
+                                        <p>직접입력</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <label>매장주소 <span>*</span>
+                                <div>
+                                    <input type="text" placeholder="매장명을 선택하면 자동으로 기입됩니다.">
+                                    <input type="text" placeholder="상세주소를 입력해주세요.">
+                                </div>
+                            </label>
+                            <label id="tel">연락처
+                                <div>
+                                    <input type="text" placeholder="매장 연락처를  - 없이 입력해주세요.">
+                                </div>
+                            </label>
+                            <label>사업자등록번호
+                                <div>
+                                    <input type="text" placeholder="사업자등록번호를  - 없이 입력해주세요.">
+                                    <p class="btn_type">확인</p>
+                                </div>
+                            </label>
+                            <div>
+                                <label>업종 <span>*</span></label>
+                                <div class="select_box">
+                                    <div class="select-box-area">
+                                        <div class="select-box" id="select_box_big" >
+                                          대분류
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="select-box-area">
+                                        <div class="select-box" id="select_box_small">
+                                          소분류
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <label>영업시간 <span>*</span>
+                                <div class="set_clock">
+                                    <div class="start_clock start_clock2">
+                                        <p>09:40</p>
+                                    </div>
+                                    ~
+                                    <div class="end_clock end_clock2">
+                                        <p>23:30</p>
+                                    </div>
+                                </div>
+                            </label> 
+                        </form>
+                        <div class="form_bottom">
+                            <button>다음</button>
+                        </div>
+                        
+                        <div class="space_down_box1">
+                            <div>
+                                <h2>대분류</h2>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0007 10.5862L16.9507 5.63623L18.3647 7.05023L13.4147 12.0002L18.3647 16.9502L16.9507 18.3642L12.0007 13.4142L7.05072 18.3642L5.63672 16.9502L10.5867 12.0002L5.63672 7.05023L7.05072 5.63623L12.0007 10.5862Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <ul>
+                                <li><p>카페</p><img src="img/space_check_none.png"></li>
+                                <li><p>음식점</p><img src="img/space_check_none.png"></li>
+                                <li><p>주점</p><img src="img/space_check_none.png"></li>
+                                <li><p>병원</p><img src="img/space_check_none.png"></li>
+                                <li><p>생활/편의</p><img src="img/space_check_none.png"></li>
+                                <li><p>숙박</p><img src="img/space_check_none.png"></li>
+                                <li><p>기타</p><img src="img/space_check_none.png"></li>
+                              </ul>
+                        </div>
+
+                        <div class="space_down_box2">
+                            <div>
+                                <h2>소분류</h2>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0007 10.5862L16.9507 5.63623L18.3647 7.05023L13.4147 12.0002L18.3647 16.9502L16.9507 18.3642L12.0007 13.4142L7.05072 18.3642L5.63672 16.9502L10.5867 12.0002L5.63672 7.05023L7.05072 5.63623L12.0007 10.5862Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <ul>
+                                <li><p>일반카페</p><img src="img/space_check_none.png"></li>
+                                <li><p>베이커리 카페</p><img src="img/space_check_none.png"></li>
+                                <li><p>북카페</p><img src="img/space_check_none.png"></li>
+                                <li><p>키즈카페</p><img src="img/space_check_none.png"></li>
+                                <li><p>스터디카페</p><img src="img/space_check_none.png"></li>
+                                <li><p>전통차</p><img src="img/space_check_none.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </div>
+    </div>
+
+</body>
+</html>

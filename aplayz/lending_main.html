@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width. initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        * {margin:0; padding:0; list-style:none;box-sizing:border-box;}
+        a {color:inherit; text-decoration:none;}
+        img {display:block;}
+
+        html, body {width:100%; }
+        body {background:#000; }
+        section { width:100%;}
+        button {border:none;  outline:none; cursor:pointer;border-radius:8px; font-size:16px; font-family:'LaTo', 'Noto Sans KR', sans-serif;}
+        ::-webkit-scrollbar {display:none;}
+
+        .wrap {position:relative; }
+        .header {position:fixed; top:0; left:50%;z-index:55;transform:translateX(-50%); width:90%;font-weight:500; }
+        .header_box {display:flex; justify-content:space-between; align-items:center; padding:16px 0;}
+        .logo {width:120px;}
+        .right_menu {display:flex; justify-content:center; align-items:center; }
+        .right_menu button {background: transparent; border-radius: 50px;padding:15px 42px; color:#fff; font-size:16px; font-weight:700;}
+        .right_menu button:nth-child(2) {background: #FF1150; margin-left:40px;}
+        .toggle {display:none; width:18px; }
+      
+
+        .main { position:sticky;top:0;z-index:-1;width:100%; height:100vh; background:url('img/lending_pg_bg.png') no-repeat center 0; background-size:cover;overflow:hidden;}
+        .main img { position:absolute; top:0; left:50%;  width: 1920px;transform:translateX(-50%); height:100%; clip-path:circle(180px at center); animation:circle 10s linear forwards;animation-delay: 1s; }
+
+        @keyframes circle {
+            0% { clip-path:circle(180px at center); }
+          
+            100% { clip-path:circle(2000px at center);}
+        }
+
+        .content {position:relative;position: absolute;width: 100%;height: 100%;top: 0; left:50%; transform:translateX(-50%);z-index: 50;}
+        .content h2 {position: absolute;top: 50%;margin-top: -100px;font-size: 5.3vw; font-weight:700;width: 100%; padding:0 5%;text-align: center;color: transparent; animation: blurFadeInOut 2s ease-in;}
+        .content h2.frame-1 {animation-delay: 0s;}
+        .content h2.frame-2 {animation-delay: 2s;}
+        .content h2.frame-3 {animation: blurFadeInOut1 3s ease-in forwards;animation-delay: 4s;}
+
+
+        @keyframes blurFadeInOut {
+            0% {
+                opacity: 0;
+                text-shadow: 0px 0px 40px #fff;
+                transform: scale(1.3);
+            }
+            20%, 75% {
+                opacity: 1;
+                text-shadow: 0px 0px 1px #fff;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                text-shadow: 0px 0px 50px #fff;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes blurFadeInOut1 {
+            0% {
+                opacity: 0;
+                text-shadow: 0px 0px 40px #fff;
+                transform: scale(1.3);
+            }
+            20%, 75% {
+                opacity: 1;
+                text-shadow: 0px 0px 1px #fff;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1;
+                color:#fff;
+                transform: scale(1);
+            }
+        }
+
+
+        .section2 {background:#000; padding:200px 0;}
+        .slide_area {position:relative; width:100%; height:580px; border-top:1px solid rgba(255,255,255,0.3);border-bottom:1px solid rgba(255,255,255,0.3);display:flex; justify-content:flex-start; }
+        .slide_area img {position:absolute; top:-77px; left:56.5%;}
+        .text_scroll {width:100%; padding-left:16%;}
+        .text_scroll .swiper-slide:nth-child(1) {padding:84px 0 87px 100px; }
+        .text_scroll .swiper-slide:nth-child(2) {padding:107px 0 110px 100px; }
+        .text_scroll .swiper-slide:nth-child(3) {padding:77px 0 80px 100px; }
+        .text_scroll .swiper-slide:nth-child(4) {padding:75px 0 78px 100px; }
+
+        .text_scroll .swiper-slide h2 {color:#fff; font-size:48px; font-weight:500; margin-bottom:120px;}
+        .text_scroll .swiper-slide h4 {color:#fff; font-size:32px; font-weight:700;margin-bottom:16px;}
+        .text_scroll .swiper-slide p {color: rgba(255, 255, 255, 0.87);font-size:20px; font-weight:500;}
+        .text_scroll .swiper-slide button {padding:12px 16px; background:#FF1150; border-radius:50px;color:#fff; font-size:16px; font-weight:700;margin-top:16px;}
+        .slide_area .swiper-pagination {left:16%;width:16px;display:flex; flex-direction:column; justify-content:center; align-items:center;}
+        .slide_area .swiper-pagination-bullet {width:12px; height:12px; background:#ccc;margin:8px 0 !important;}
+        .slide_area .swiper-pagination-bullet-active {width:16px; height:16px;background:#fff;}
+
+
+        .section3 {position:relative;width:100%; height:100vh;  background:#000;overflow:hidden;}
+        #line {position:absolute; top:40%; width:100%;  border-top:1px solid rgba(255,255,255,0.3);}
+        .animation {position:relative;position:absolute; display:flex; align-items:center; transform:translateX(0);animation:marquee 30s linear infinite; }
+        .align_item {position:relative; width:3000px; height:100%;display:flex; align-items:center; }
+        .align_item .align_box { position:relative; margin-left:10%;}
+        .align_item .align_box2 img {width:462px; height:462px;border-radius:50%;}
+        .align_item .align_box > p { position:absolute; left:50%; bottom:46px; transform:translateX(-50%); width:100%;color:#fff;font-size:20px; font-weight:500;text-align:center;}
+        .align_item .align_box .hash_tag p {color:rgba(255,255,255,0.5);font-size:36px; font-weight:300;}
+
+        .align_box1 {margin-top:-2%;}
+        .align_box {margin-bottom:100px;}
+        .align_box1 .hash_tag { position:absolute; right:-78px; top:-87px; }
+        .align_box2 {margin-top:13.5%;}
+        .align_box2 .hash_tag { position:absolute; right:-78px; top:-25px; }
+        .align_box3 {margin-top:4%;}
+        .align_box3 .hash_tag { position:absolute; right:-78px; top:-87px; }
+        .align_box4 {margin-top:7%;}
+        .align_box4 .hash_tag { position:absolute; right:-78px; top:-87px; }
+
+
+        @keyframes marquee {
+            100% {transform:translateX(-3000px);}
+        }
+
+
+        .footer {width:100%; background:#000; padding:52px 80px 62px; border-top:1px solid rgba(255,255,255,0.3); }
+        .footer ul li {display:inline-block; color: rgba(255, 255, 255, 0.6); font-size:16px; font-weight:300;}
+        .footer_top, .footer_bottom {display:flex; justify-content:space-between; align-items:center;}
+        .footer_top ul li {margin-right:62px; }
+        .footer_top ul:first-child li:nth-child(2) {color:#fff;font-weight:700;}
+        .footer_top ul:last-child {display:flex; justify-content:flex-end; align-items:center;}
+        .footer_top ul:last-child li {margin:0; margin-left:20px; }
+        .footer > p {color: rgba(255, 255, 255, 0.6); font-size:16px; font-weight:300; margin:30px 0 12px;}
+        .footer_top ul:last-child li img {filter:brightness(30%);}
+        .footer_bottom ul li {margin-right:32px;}
+        .footer_bottom p {color: rgba(255, 255, 255, 0.6); font-size:16px; font-weight:400;}
+
+        @media all and (max-width:1200px) {
+            .footer {padding:52px 5% 62px;  }
+    
+        }
+
+        @media all and (max-width:768px) {
+
+
+            .right_menu {display:none}
+            .toggle {display:block; }
+
+
+            .main img { width: auto;clip-path:circle(140px at center); }
+
+            @keyframes circle {
+                0% { clip-path:circle(140px at center); }
+                100% { clip-path:circle(1000px at center);}
+            }
+
+            .content {width:90%;}
+            .content h2 {margin-top: -50px;font-size: 28px; color: transparent;}
+        
+            .section2 {position:relative;height:100vh;}
+            .slide_area {position:absolute; top:20%;border:0; }
+            .slide_area img {position:absolute; top:0; left:26%; width:200px;}
+            .text_scroll {width:100%; height:250px;position:relative; position:absolute; top:72%;padding-left:5%;}
+            .text_scroll .swiper-slide:nth-child(1) {height:300px;padding:0 0 0 100px;}
+            .text_scroll .swiper-slide:nth-child(2) {height:300px;padding:0 0 0 100px;}
+            .text_scroll .swiper-slide:nth-child(3) {height:300px;padding:0 0 0 100px; }
+            .text_scroll .swiper-slide:nth-child(4) {height:300px;padding:0 0 0 100px;}
+            .text_scroll .swiper-slide h2 {font-size:22px; margin-bottom:20px;}
+            .text_scroll .swiper-slide h4 { font-size:18px;margin-bottom:16px;}
+            .text_scroll .swiper-slide p {font-size:16px;}
+            .text_scroll .swiper-slide button {font-size:16px; }
+            .slide_area .swiper-pagination { top:46%; left:5%;}
+            .slide_area .swiper-pagination-bullet {margin:10px 0 !important;}
+
+
+            .section3 {height:600px; padding-top:100px;}
+            #line { top:40%;}
+            .align_item {width:1600px; }
+            .align_item .align_box img {width:210px; height:210px;}
+            .align_item .align_box2 img {width:210px; height:210px;}
+            .align_item .align_box > p { font-size:12px; }
+            .align_item .align_box .hash_tag p {font-size:16px; }
+
+            .align_box1 {margin-top:3%;}
+            .align_box {margin-bottom:100px;}
+            .align_box1 .hash_tag { position:absolute; right:-78px; top:-87px; }
+            .align_box2 {margin-top:16%;}
+            .align_box2 .hash_tag { position:absolute; right:-78px; top:-25px; }
+            .align_box3 {margin-top:4%;}
+            .align_box3 .hash_tag { position:absolute; right:-78px; top:-87px; }
+            .align_box4 {margin-top:8%;}
+            .align_box4 .hash_tag { position:absolute; right:-78px; top:-87px; }
+
+
+            @keyframes marquee {
+                100% {transform:translateX(-1600px);}
+            }
+
+
+
+        }
+
+        @media all and (max-width:500px) {
+            .text_scroll { top:35%;}
+            .text_scroll .swiper-slide:nth-child(1) {padding:84px 0 87px 50px; }
+            .text_scroll .swiper-slide:nth-child(2) {padding:107px 0 110px 50px; }
+            .text_scroll .swiper-slide:nth-child(3) {padding:77px 0 80px 50px; }
+            .text_scroll .swiper-slide:nth-child(4) {padding:75px 0 78px 50px; }
+
+
+            .footer {padding:52px 5% 62px; }
+
+            .footer_top, .footer_bottom {display:block;}
+            .footer_top ul li {margin-right:20px;font-size:14px;  }
+            .footer_top ul:last-child {display:block;}
+            .footer_top ul:last-child li {margin:0;margin-top:20px; margin-right:20px; }
+            .footer > p {color: rgba(255, 255, 255, 0.6); font-size:14px; font-weight:300; margin:30px 0 12px;}
+            .footer_top ul:last-child li img {filter:brightness(30%);}
+            .footer_bottom ul li { font-size:14px;margin-right:20px;}
+            .footer_bottom p { font-size:12px; }
+
+
+        }
+
+        @media all and (max-width:375px) {
+            .text_scroll { top:40%;}
+
+        }
+        
+    
+
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            AOS.init();
+
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_box">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M56.6146 10.9185H50.5898V29.7415H54.7216V23.493H56.7293C60.3533 23.493 63.5143 21.52 63.5143 17.0426C63.5188 12.3851 60.3989 10.9185 56.6146 10.9185ZM56.5251 19.923H54.7252V14.4845H56.4096C58.394 14.4845 59.5017 15.1422 59.5017 17.0396C59.4981 18.8873 58.5301 19.923 56.5215 19.923H56.5251Z" fill="white"/>
+                            <path d="M69.624 10.9185H65.4922V29.7415H76.2944V25.9466H69.6249L69.624 10.9185Z" fill="white"/>
+                            <path d="M99.1238 18.7708H99.0343C98.5498 17.3042 96.2189 10.9185 96.2189 10.9185H91.8311L97.0007 23.0861V29.7415H101.108V23.088L106.302 10.9204H101.987C101.987 10.9204 99.6083 17.3042 99.1238 18.7708Z" fill="white"/>
+                            <path d="M112.523 25.9446L119.931 13.6248V10.9185H108.161V14.6616H114.854L107.445 27.0063V29.7415H120V25.9466L112.523 25.9446Z" fill="white"/>
+                            <path d="M38.6403 10.9185L33.3086 29.7415H37.5084L40.9712 14.8068L44.5711 29.7415H48.9097L43.5771 10.9185H38.6403Z" fill="white"/>
+                            <path d="M41.1102 25.6749C40.7497 25.6805 40.3988 25.8045 40.1015 26.0312C39.8042 26.2579 39.5739 26.5772 39.4395 26.9489C39.305 27.3206 39.2725 27.7282 39.346 28.1204C39.4194 28.5126 39.5956 28.8719 39.8523 29.1532C40.1091 29.4344 40.4349 29.6251 40.7889 29.7012C41.1429 29.7773 41.5092 29.7354 41.8418 29.5808C42.1744 29.4262 42.4585 29.1658 42.6583 28.8323C42.8581 28.4989 42.9647 28.1072 42.9648 27.7066C42.9631 27.4379 42.9138 27.1722 42.8197 26.9246C42.7256 26.677 42.5886 26.4525 42.4163 26.2638C42.2441 26.0751 42.0401 25.926 41.816 25.825C41.5919 25.7239 41.3521 25.6729 41.1102 25.6749Z" fill="white"/>
+                            <path d="M9.64077 11.4397L13.8495 26.3097L20.5289 15.1828H13.8361V11.4387H21.6402L6.21555 0.692925C5.60187 0.265954 4.89719 0.0276039 4.17348 0.00225683C3.44978 -0.0230903 2.73299 0.165455 2.09633 0.548634C1.46489 0.925871 0.936831 1.48553 0.567861 2.16851C0.198891 2.8515 0.00269572 3.63251 0 4.42908V28.0101L4.69591 11.4297L9.64077 11.4397Z" fill="white"/>
+                            <path d="M28.4498 16.1799L25.5843 14.1899L18.1992 26.471H24.4228L28.4525 23.6661C29.0258 23.2716 29.499 22.721 29.8271 22.0663C30.1553 21.4117 30.3275 20.6748 30.3275 19.9255C30.3275 19.1762 30.1553 18.4393 29.8271 17.7847C29.499 17.13 29.0258 16.5794 28.4525 16.1849L28.4498 16.1799Z" fill="white"/>
+                            <path d="M7.03262 15.3252L3.57069 30.2609H0.00488281V35.4039C0.00738667 36.2005 0.20348 36.9816 0.572471 37.6646C0.941461 38.3477 1.46964 38.9073 2.1012 39.2843C2.73786 39.6674 3.45458 39.8559 4.17823 39.8307C4.90188 39.8056 5.60656 39.5676 6.22042 39.141L18.9766 30.2569H10.6351L7.03262 15.3252ZM7.17053 30.2609C6.81006 30.2552 6.45914 30.1312 6.16188 29.9046C5.86463 29.6779 5.6343 29.3587 5.49985 28.9871C5.3654 28.6154 5.33282 28.2079 5.40621 27.8157C5.4796 27.4235 5.65568 27.0642 5.91232 26.7829C6.16897 26.5016 6.49472 26.3109 6.84865 26.2347C7.20257 26.1585 7.56888 26.2002 7.90151 26.3546C8.23415 26.5091 8.51827 26.7693 8.71818 27.1027C8.91809 27.436 9.02486 27.8276 9.02507 28.2281C9.02343 28.4969 8.97416 28.7627 8.88007 29.0103C8.78598 29.2579 8.64892 29.4825 8.47671 29.6712C8.3045 29.86 8.10051 30.0092 7.8764 30.1104C7.65228 30.2116 7.41243 30.2627 7.17053 30.2609Z" fill="white"/>
+                            <path d="M83.572 10.9185L78.2412 29.7415H82.4419L85.9039 14.8068L89.5037 29.7415H93.8432L88.5115 10.9214L83.572 10.9185Z" fill="white"/>
+                            <path d="M86.0428 25.6749C85.6822 25.6804 85.3312 25.8042 85.0338 26.0307C84.7364 26.2573 84.5059 26.5765 84.3714 26.9482C84.2368 27.3199 84.2041 27.7275 84.2775 28.1198C84.3509 28.5121 84.527 28.8715 84.7837 29.1529C85.0404 29.4342 85.3662 29.625 85.7202 29.7011C86.0742 29.7773 86.4406 29.7355 86.7733 29.5809C87.1059 29.4263 87.3901 29.1659 87.5899 28.8325C87.7897 28.499 87.8964 28.1073 87.8964 27.7066C87.8949 27.4379 87.8457 27.1722 87.7517 26.9247C87.6577 26.6771 87.5207 26.4526 87.3486 26.2639C87.1764 26.0752 86.9725 25.926 86.7484 25.825C86.5244 25.7239 86.2846 25.6729 86.0428 25.6749Z" fill="white"/>
+                            </svg>
+                    </a>
+                </div>
+                <div class="right_menu">
+                  <button>로그인</button>
+                  <button>회원가입</button>
+                </div>
+                <div class="toggle">
+                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 16L0 16L-1.74846e-07 14L18 14L18 16ZM18 9L6 9L6 7L18 7L18 9ZM18 2L-1.22392e-06 2L-1.39876e-06 1.57361e-06L18 0L18 2Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </header>
+        <section class="section main">
+
+            <img src="img/animation_bg.png" alt="">
+            <div class="content">
+                <h2 class="frame-1">공간음악<br>큐레이션의 끝판왕!</h2>
+                <h2 class="frame-2">지금 내가 있는 공간에서의 최적화된 음악 재생</h2>
+                <h2 class="frame-3">지금 바로 APLAYZ로<br>당신이 있는 공간의 가치를 더 높여보세요</h2>
+            </div>
+
+        </section>
+        <section class="section section2">
+            <div class="slide_area" data-aos="fade-up" data-aos-duration="1500">
+                <img src="img/mockup 1.png" alt="">
+                <div class="swiper text_scroll">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>음원 서비스를<br>
+                                국내 최저가로 만나보세요.</h2>
+                            <h4>매장<br>차량</h4>
+                            <p>매장, 차량 어디서든 최저가로<br>
+                                즐길 수 있습니다.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>매일 동일한<br>
+                                음악 채널은 이제 그만!</h2>
+                            <h4>공간을 담은 음악 채널</h4>
+                            <p>매일 내 공간에 최적화된 공간<br>
+                                플레이 리스트가 새롭게 생성돼요.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>AI가<br>
+                                맞춤형 플레이리스트를<br>
+                                만들어 드려요.</h2>
+                            <h4>똑똑한 큐레이션</h4>
+                            <p>매장, 차량 어디서든 최저가로<br>
+                                즐길 수 있습니다.</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>브랜드 가치를 더 높여주는<br>
+                                그룹 관리 기능!</h2>
+                            <h4>브랜딩 음악</h4>
+                            <p>브랜드에 맞는 매장 음악으로<br>
+                                공간을 브랜딩 해보세요.</p>
+                            <button>프렌차이즈 보러가기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+        <section class="section section3">
+            <div id="line"></div>
+            <div class="animation">
+                <div class="align_item">
+                    <div class="align_box1 align_box">
+                        <img src="img/align-img1.png" alt="">
+                        <p>와인바에서 듣기 좋은</p>
+                        <div class="hash_tag">
+                            <p>#저녁</p>
+                            <p>#모던한</p>
+                            <p>#클래식</p>
+                        </div>
+                    </div>
+                    <div class="align_box2 align_box">
+                        <img src="img/align-img2.png" alt="">
+                        <p>비오는 날 드라이브 어때요</p>
+                        <div class="hash_tag">
+                            <p>#비오는날</p>
+                            <p>#팝송</p>
+                            <p>#90년대</p>
+                        </div>
+                    </div>
+                    <div class="align_box3 align_box">
+                        <img src="img/align-img3.png" alt="">
+                        <p>힙한 곳에선 이 음악을 듣지</p>
+                        <div class="hash_tag">
+                            <p>#저녁</p>
+                            <p>#모던한</p>
+                            <p>#클래식</p>
+                        </div>
+                    </div>
+                    <div class="align_box4 align_box">
+                        <img src="img/align-img1.png" alt="">
+                        <p>와인바에서 듣기 좋은</p>
+                        <div class="hash_tag">
+                            <p>#저녁</p>
+                            <p>#모던한</p>
+                            <p>#클래식</p>
+                        </div>
+                    </div>
+                </div>
+       
+                <div class="align_item">
+                    <div class="align_box1 align_box">
+                        <img src="img/align-img1.png" alt="">
+                        <p>와인바에서 듣기 좋은</p>
+                        <div class="hash_tag">
+                            <p>#저녁</p>
+                            <p>#모던한</p>
+                            <p>#클래식</p>
+                        </div>
+                    </div>
+                    <div class="align_box2 align_box">
+                        <img src="img/align-img2.png" alt="">
+                        <p>비오는 날 드라이브 어때요</p>
+                        <div class="hash_tag">
+                            <p>#비오는날</p>
+                            <p>#팝송</p>
+                            <p>#90년대</p>
+                        </div>
+                    </div>
+                    <div class="align_box3 align_box">
+                        <img src="img/align-img3.png" alt="">
+                        <p>힙한 곳에선 이 음악을 듣지</p>
+                        <div class="hash_tag">
+                            <p>#저녁</p>
+                            <p>#모던한</p>
+                            <p>#클래식</p>
+                        </div>
+                    </div>
+                    <div class="align_box4 align_box">
+                        <img src="img/align-img1.png" alt="">
+                        <p>와인바에서 듣기 좋은</p>
+                        <div class="hash_tag">
+                            <p>#저녁</p>
+                            <p>#모던한</p>
+                            <p>#클래식</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer_top">
+                <ul>
+                    <li><a href="">서비스 이용약관</a></li>
+                    <li><a href="">개인정보 취급방침</a></li>
+                    <li><a href="">제휴문의</a></li>
+                    <li><a href="">1:1문의</a></li>
+                    <li><a href="">프랜차이즈</a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><img src="img/youtube.png" alt=""></a></li>
+                    <li><a href=""><img src="img/facebook.png" alt=""></a></li>
+                    <li><a href=""><img src="img/Instagram.png" alt=""></a></li>
+                </ul>
+            </div>
+            <p>서울특별시 강남구 테헤란로 31 어플레이즈 빌딩 50F</p>
+            <div class="footer_bottom">
+                <ul>
+                    <li>(주) 어플레이즈</li>
+                    <li>대표 홍길동</li>
+                    <li>사업자 등록번호 : 000-00-000000</li>
+                </ul>
+                <p>Copyright © APLAYZ Co., Ltd. 2022. All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var swiper = new Swiper(".text_scroll", {
+            direction: "vertical",
+            slidesPerView:1,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            mousewheel: true,
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <link rel="stylesheet" href="css/content.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="coupon_upload_modal modal">
+            <div class="coupon_upload_box modal_box">
+                <div class="coupon_upload_txt modal_title">
+                    <h2>쿠폰등록</h2>
+                    <!--<div class="modal_close_btn">
+                        <img src="img/close_btn.png" alt="">
+                    </div>-->
+                </div>
+                <div class="mo_space_header">
+                    <div class="mo_header_box">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z" fill="white"/>
+                        </svg>     
+                        <h2>쿠폰등록</h2>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="coupon_input">
+                    <input type="text" placeholder="발급받은 쿠폰 코드 7자리를 입력해주세요.">
+                </div>
+                <p>코드번호가 유효하지 않습니다.</p>
+                <div class="btn_area modal_bottom_btn">
+                    <button id="prev_btn">취소</button>
+                    <button>적용</button>
+                </div>
+                <div class="form_bottom">
+                    <button>등록</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="upload_finished_modal alert">
+            <div class="finished_box alert_box">
+                <p>쿠폰 등록이 완료되었습니다</p>
+                <button>확인</button>
+            </div>
+        </div>
+
+        <div class="toggle_menu" id="toggle_menu">
+            <div class="toggle_box">
+                <div class="toggle_close">
+                    <h2>메뉴</h2>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 6.2225L14.2225 0L16 1.7775L9.7775 8L16 14.2225L14.2225 16L8 9.7775L1.7775 16L0 14.2225L6.2225 8L0 1.7775L1.7775 0L8 6.2225Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="toggle_email">
+                    <h2>haha@gmail.com</h2>
+                    <img src="img/toggle_setting.svg" alt="">
+                </div>
+                <ul>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_icon1.svg" alt="">
+                        </div>
+                        <p>마이스페이스</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_icon2.svg" alt="">
+                        </div>
+                        <p>이용권 소개</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_icon3.svg" alt="">
+                        </div>
+                        <p>이용권 현황</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_icon4.svg" alt="">
+                        </div>
+                        <p>결제카드</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_icon5.svg" alt="">
+                        </div>
+                        <p>쿠폰</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_icon6.svg" alt="">
+                        </div>
+                        <p>고객센터</p>
+                    </li>
+                    
+                </ul>
+                <div>
+                    <p>서비스 이용약관</p>
+                    <p>개인정보처리방침</p>
+                </div>
+                <div>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.33317 13.4173C1.15636 13.4173 0.98679 13.3471 0.861766 13.2221C0.736742 13.097 0.666504 12.9275 0.666504 12.7507V0.750651C0.666504 0.57384 0.736742 0.404271 0.861766 0.279246C0.98679 0.154222 1.15636 0.0839844 1.33317 0.0839844H10.6665C10.8433 0.0839844 11.0129 0.154222 11.1379 0.279246C11.2629 0.404271 11.3332 0.57384 11.3332 0.750651V2.75065H9.99984V1.41732H1.99984V12.084H9.99984V10.7507H11.3332V12.7507C11.3332 12.9275 11.2629 13.097 11.1379 13.2221C11.0129 13.3471 10.8433 13.4173 10.6665 13.4173H1.33317ZM9.99984 9.41732V7.41732H5.33317V6.08398H9.99984V4.08398L13.3332 6.75065L9.99984 9.41732Z" fill="white"/>
+                    </svg>
+                    <p>로그아웃</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <header class="header pc_header">
+            <div class="header_box">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/suv_logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="right_menu">
+                    <div class="shop_info">
+                        <a href="">
+                            <img src="img/header_shop.png" alt="">
+                            <p>투썸플레이스 강남점</p>
+                        </a>
+                    </div>
+                    <div class="alarm_box">
+                        <img src="img/alarm_icon_active.svg" alt=""></a>
+                    </div>
+                    <div class="toggle">
+                        <img src="img/toggle.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header mo_header">
+            <div class="header_box">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z" fill="white"/>
+                        </svg> 
+                        <h2>쿠폰</h2>
+                    </a>
+                </div>
+                <div class="right_menu">
+                    <!--<div class="shop_info">
+                        <a href="">
+                            <img src="img/header_shop.png" alt="">
+                            <p>투썸플레이스 강남점</p>
+                        </a>
+                    </div>-->
+                    <div class="alarm_box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.02759 19.7773C9.02759 20.5181 9.46002 21.9996 11.1897 21.9996C12.9195 21.9996 13.3519 20.5181 13.3519 19.7773" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.00024 18.666H20.3786" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.62183 18.1113V10.3335C3.62183 7.92613 5.13534 3.11133 11.1894 3.11133C17.2434 3.11133 18.7569 8.2965 18.7569 10.8891V18.1113" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <ellipse cx="17.6756" cy="6.44444" rx="4.32431" ry="4.44444" fill="#FF1150"/>
+                        </svg>
+                    </div>
+                    <div class="toggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2231_20993)">
+                            <path d="M24 20L6 20L6 18L24 18L24 20ZM24 13L12 13L12 11L24 11L24 13ZM24 6L6 6L6 4L24 4L24 6Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_2231_20993">
+                            <rect width="24" height="24" fill="white" transform="translate(24 24) rotate(180)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main coupon">
+            <div class="main_box">
+                
+                <div class="main_box_title">
+                    <h1>쿠폰</h1>
+                    <div class="coupon_btn">
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.8 6.45H6.95V6.3V3.65H8.05V6.3V6.45H8.2H10.85V7.55H8.2H8.05V7.7V10.35H6.95V7.7V7.55H6.8H4.15V6.45H6.8ZM7.5 13.85C3.71674 13.85 0.65 10.7833 0.65 7C0.65 3.21674 3.71674 0.15 7.5 0.15C11.2833 0.15 14.35 3.21674 14.35 7C14.35 10.7833 11.2833 13.85 7.5 13.85ZM7.5 12.75C9.02499 12.75 10.4875 12.1442 11.5659 11.0659C12.6442 9.98753 13.25 8.52499 13.25 7C13.25 5.47501 12.6442 4.01247 11.5659 2.93414C10.4875 1.8558 9.02499 1.25 7.5 1.25C5.97501 1.25 4.51247 1.8558 3.43414 2.93414C2.3558 4.01247 1.75 5.47501 1.75 7C1.75 8.52499 2.3558 9.98753 3.43414 11.0659C4.51247 12.1442 5.97501 12.75 7.5 12.75Z" fill="white" stroke="#151515" stroke-width="0.3"/>
+                        </svg>
+                        <p>쿠폰등록</p>
+                    </div>
+                </div>
+                <div class="coupon_img_box">
+                    <div>
+                        <div class="coupon_txt">
+                            <span>D-50</span>
+                            <h3>첫 구독 50% 할인 쿠폰</h3>
+                            <p>첫 어플레이스 서비스 구독 시 사용 가능합니다.</p>
+                            <p>2021.10.28 ~ 2021.11.28 사용</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="coupon_txt">
+                            <span>D-50</span>
+                            <h3>첫 구독 50% 할인 쿠폰</h3>
+                            <p>첫 어플레이스 서비스 구독 시 사용 가능합니다.</p>
+                            <p>2021.10.28 ~ 2021.11.28 사용</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="regi_bottom">
+                    <h5>유의사항</h5>
+                    <ul>
+                        <li><span></span><p>쿠폰은 결제시 선택하여 1개만 사용 가능합니다.</p> </li>
+                        <li><span></span><p>유효기간이 만료된 쿠폰은 사용 불가하오니 만료 전 사용해주세요.</p></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+
+</body>
+</html>

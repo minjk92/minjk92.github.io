@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <style>
+        .main {width:100%; max-width:1200px; margin:0 auto; }
+
+        /*alert*/
+        .brand_delet_box h3 {padding-bottom:26px;color: rgba(255, 255, 255, 0.87);font-size:18px; font-weight:300;}
+        .brand_delet_btn {width:100%; height:60px; border-top:1px solid rgba(255, 255, 255, 0.08); display:flex; justify-content:center; align-items:center;}
+        .brand_delet_btn p {width:50%; color:#fff; font-size:18px; line-height:60px;font-weight:400;text-align:center;cursor:pointer;}
+        .brand_delet_btn p#color_txt {color:#FF2D55;}
+
+        .delet_finish_box h3 {padding-bottom:26px;color: rgba(255, 255, 255, 0.87);font-size:18px;font-weight:300;}
+        .delet_finish_btn {width:100%; height:60px; border-top:1px solid rgba(255, 255, 255, 0.08); display:flex; justify-content:center; align-items:center;}
+        .delet_finish_btn p {width:100%; color:#FF2D55;font-size:18px; line-height:60px;font-weight:400;text-align:center;cursor:pointer;}
+
+        .brand_setting_box h3 {padding-bottom:26px;color: rgba(255, 255, 255, 0.87);font-size:18px; font-weight:300;}
+        .brand_setting_btn {width:100%; height:60px; border-top:1px solid rgba(255, 255, 255, 0.08); display:flex; justify-content:center; align-items:center;}
+        .brand_setting_btn p {width:50%; color:#fff; font-size:18px; line-height:60px;font-weight:400;text-align:center;cursor:pointer;}
+        .brand_setting_btn p#color_txt {color:#FF2D55;}
+
+        .setting_finish_box h3 {padding-bottom:26px;color: rgba(255, 255, 255, 0.87);font-size:18px;font-weight:300;}
+        .setting_finish_btn {width:100%; height:60px; border-top:1px solid rgba(255, 255, 255, 0.08); display:flex; justify-content:center; align-items:center;}
+        .setting_finish_btn p {width:100%; color:#FF2D55;font-size:18px; line-height:60px;font-weight:400;text-align:center;cursor:pointer;}
+        /**/
+
+
+        .brand_upload_title h2 {color:#fff; font-size:24px; font-weight:400;}
+        /*추가*/
+       
+        .brand_upload_box > div {position:relative;}
+        .brand_upload_box > div label {display:block;color:#fff; font-size:16px; margin-bottom:8px; }
+        .brand_upload_box > div input {display:block; width:100%;}
+        .brand_upload_box > div:nth-child(2) {margin-bottom:16px; }
+        .brand_upload_box > div:nth-child(2) p:nth-of-type(1) {position:absolute; top:50%; right:16px; transform:translateY(-42%);color: rgba(255, 255, 255, 0.84); font-size:14px;  font-weight:300;}
+        .brand_upload_box > div:nth-child(2) p:nth-of-type(1) span {color:#fff;   font-weight:400;}
+        .brand_upload_box > div p.alert_p {color: #E85454; font-size:14px;margin-top:6px;  }
+
+        .brand_upload_box > div:nth-child(3) > p {color: #fff; font-size:16px;margin-bottom:8px;}
+        .brand_upload_box > div:nth-child(3) div {position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:48px 0;border: 1px dashed rgba(255, 255, 255, 0.3);border-radius: 8px;}
+        .brand_upload_box > div:nth-child(3) div p {color: rgba(255, 255, 255, 0.44);font-size:16px;}
+        .brand_upload_box > div:nth-child(3) > p.alert_p {color: #E85454; font-size:14px;margin:6px 0 16px;  }
+
+        .delet_btn2 {width:100%; display:flex; justify-content:flex-end; align-items:center;margin-top:8px;  margin-bottom:0!important; }
+        .delet_btn2 div { display:flex;  justify-content:center; align-items:center; width:92px; height:34px; border: 1px solid rgba(255, 255, 255, 0.3);border-radius: 8px;cursor:pointer;  transition:all 0.3s;}
+        .delet_btn2 div:hover {background:rgba(255,255,255,0.1);}
+        .delet_btn2  div p {position:static!important; top:auto!important; right:auto !important; transform:translate(0)!important;color: rgba(255, 255, 255, 0.87); font-size:14px; font-weight:400; margin-left:4px;}
+
+
+        .setting_box > div:nth-child(3) {margin-bottom:16px; }
+        .setting_box > div:nth-child(3) p:nth-of-type(1) {position:absolute; top:50%; right:16px; transform:translateY(-42%);color: rgba(255, 255, 255, 0.84); font-size:14px;  font-weight:300;}
+        .setting_box > div:nth-child(3) p:nth-of-type(1) span {color:#fff;   font-weight:400;}
+        .setting_box > div p.alert_p {color: #E85454; font-size:14px;margin-top:6px;  }
+
+        .setting_box > div:nth-child(4) > p {color: #fff; font-size:16px;margin-bottom:8px;}
+        .setting_box > div:nth-child(4) div {position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; padding: 0;border: 0;background: rgba(255, 255, 255, 0.08);border-radius: 8px;}
+        .setting_box > div:nth-child(4) div .hover_delet {position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0, 0, 0, 0.8); border-radius: 8px;display:flex; justify-content:center; align-items:center; cursor:pointer;}
+        .setting_box > div:last-child { justify-content:space-between !important;align-items:center;}
+        .setting_box > div:last-child p {color: rgba(255, 255, 255, 0.6); font-size:16px; text-decoration:underline;cursor:pointer;}
+
+        .brand_upload_box ul li {color: rgba(255, 255, 255, 0.6); font-size:14px; margin-bottom:4px;}
+        .brand_upload_box ul li span {display:inline-block; width:4px; height:4px; background: #C4C4C4;; border-radius:50%; margin-right:8px; vertical-align:middle; margin-top:-5px;}
+        .brand_upload_box > div:last-child {display:flex; justify-content:flex-end; margin-top:26px;}
+
+
+        
+        .group_store {width:100%;padding-top:132px;  }
+        .group_store_title {display:flex; justify-content:space-between; align-items:center; margin-bottom:55px;}
+        .group_store_title h2 {color:#fff; font-size:38px; font-weight:500;}
+
+        .brand_management_content {display:flex;  flex-wrap:wrap; justify-content:space-between; align-items:center; }
+        .brand_management {position:relative; display:flex;justify-content:flex-start; align-items:center; width:49%; border-radius:8px; background: linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), #151515; margin-bottom:24px; transition:all 0.3s;}
+        .brand_management:hover {box-shadow:0px 20px 30px rgba(0, 0, 0, 0.84);}
+
+        /*수정*/
+        .brand_management .group_tab_setting {position:absolute; top:10px; right:10px; z-index:3;display:flex; justify-content:center; align-items:center;width:36px; height:36px; padding:0 !important; border-radius:50%;cursor:pointer; transition:all 0.3s;}
+        .brand_management .group_tab_setting:hover {background:rgba(255,255,255,0.08);}
+        .brand_management .group_tab_setting:active {background:rgba(255,255,255,0.16);}
+        /**/
+        .brand_management > div {width:100%; height:100%;margin-left:24px;padding:35px 0 37px;}
+        .brand_management > div h4 {color: rgba(255, 255, 255, 0.87); font-size:18px; font-weight:400;margin-bottom:80px;}
+        .brand_management > div p {display:inline-block;padding:0 8px; border-radius:50px; color:#fff; font-size:14px; font-weight:400;}   
+        .brand_management > div p#subscribe {background: rgba(255, 137, 145, 0.16);color: #FD4E6D;}
+        .brand_management > div p#none_subscribe {color: #Fff;background: rgba(255, 255, 255, 0.16);}
+        .brand_management > div p#eorl {background: rgba(156, 255, 110, 0.16);color:#98DB78;}
+        .brand_management > div p#dhksfy {color: #ccc;background: rgba(255, 255, 255, 0.16);}
+        .brand_management > div p#rjwjf {color: #EB9F46;background: rgba(235, 159, 70, 0.16);}
+
+
+        .brand_management.empty {display:flex; flex-direction:column; justify-content:center; align-items:center; padding:38px 0;border: 1px dashed rgba(255, 255, 255, 0.4);border-radius: 8px; background:transparent; cursor:pointer;}
+        .brand_management.empty:hover {box-shadow:none;}
+        .brand_management.empty p {margin-top:20px;color:#fff; font-size:20px;}
+
+        .payment_paging {/*margin-top:120px;*/margin-top:38px;}
+
+        @media all and (max-width:1200px) {
+            .main {width:90%; }
+        }
+
+    </style>
+   
+  
+</head>
+<body>
+    <div class="wrap">
+        <!--brand_delect-->
+        <div class="brand_delet_alert alert">
+            <div class="brand_delet_box alert_box">
+                <h3>해당 브랜드를 삭제하시겠습니까?</h3>
+                <div class="brand_delet_btn">
+                    <p>아니오</p>
+                    <p id="color_txt">네</p>
+                </div>
+            </div>
+        </div>
+        <div class="delet_finish_alert alert">
+            <div class="delet_finish_box alert_box">
+                <h3>브랜드가 삭제되었습니다.</h3>
+                <div class="delet_finish_btn">
+                    <p id="color_txt">확인</p>
+                </div>
+            </div>
+        </div>
+        <!--brand_수정-->
+        <div class="brand_setting_alert alert">
+            <div class="brand_setting_box alert_box">
+                <h3>수정 시 재승인 절차가 필요합니다. <br>계속 진행하시겠습니까?</h3>
+                <div class="brand_setting_btn">
+                    <p>아니오</p>
+                    <p id="color_txt">네</p>
+                </div>
+            </div>
+        </div>
+        <div class="setting_finish_alert alert">
+            <div class="setting_finish_box alert_box">
+                <h3>수정 승인 요청이 완료되었습니다.</h3>
+                <div class="setting_finish_btn">
+                    <p id="color_txt">확인</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand_upload upload modal">
+            <div class="brand_upload_box modal_box">
+                <div class="brand_upload_title modal_title">
+                    <h2>브랜드 등록</h2>
+                    <div class="modal_close_btn">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 7.55012L16.0003 0.549805L18 2.54949L10.9997 9.5498L18 16.5501L16.0003 18.5498L9 11.5495L1.99969 18.5498L0 16.5501L7.00031 9.5498L0 2.54949L1.99969 0.549805L9 7.55012Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <label>브랜드명</label>
+                    <input type="text" class="input_text" maxlength="20" placeholder="20자 이내로 입력해주세요.">
+                    <p id="counter"><span>0</span>/20</p>
+                    <p class="alert_p">이미 등록된 브랜드명입니다.</p>
+                </div>
+                <div>
+                    <p>브랜드 로고</p>
+                    <div>
+                        <img src="img/Icon_List_52_52.png" alt="">
+                        <p>클릭하거나 드래그로 이미지를 등록하세요.</p>
+                    </div>
+                    <p class="alert_p">브랜드 로고 등록 가이드를 확인해주세요.</p>
+                </div>
+                <ul>
+                    <li><span></span>500 x 500px (1:1 비율)로 로고 이미지를 등록해주세요.</li>
+                    <li><span></span>PNG, JPEG, JPG 확장자의 파일만 등록 가능합니다.</li>
+                    <li><span></span>상업적인 이용 및 허가에 대한 부분을 확인하시어 등록해주시기 바랍니다.</li>
+                    <li><span></span>무단 · 부정한 이용으로 제3자의 권리를 침해하는 브랜드 이미지는 등록할 수 없습니다.</li>
+                </ul>
+                <div>
+                    <button>등록</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="brand_upload setting modal">
+            <div class="brand_upload_box setting_box modal_box">
+                <div class="brand_upload_title modal_title">
+                    <h2>브랜드 등록</h2>
+                    <div class="modal_close_btn">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 7.55012L16.0003 0.549805L18 2.54949L10.9997 9.5498L18 16.5501L16.0003 18.5498L9 11.5495L1.99969 18.5498L0 16.5501L7.00031 9.5498L0 2.54949L1.99969 0.549805L9 7.55012Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="delet_btn2">
+                    <div>
+                        <img src="img/delet_setting.svg" alt="">
+                        <p>수정하기</p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <label>브랜드명</label>
+                    <input type="text" class="input_text" maxlength="20" placeholder="20자 이내로 입력해주세요.">
+                    <p id="counter2"><span>0</span>/20</p>
+                    <p class="alert_p">이미 등록된 브랜드명입니다.</p>
+                </div>
+                <div>
+                    <p>브랜드 로고</p>
+                    <div>
+                        <img src="img/brand_thumnail_popup.png" alt="">
+                        <div class="hover_delet">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 2V0H15V2H20V4H18V19C18 19.2652 17.8946 19.5196 17.7071 19.7071C17.5196 19.8946 17.2652 20 17 20H3C2.73478 20 2.48043 19.8946 2.29289 19.7071C2.10536 19.5196 2 19.2652 2 19V4H0V2H5ZM4 4V18H16V4H4ZM7 7H9V15H7V7ZM11 7H13V15H11V7Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="alert_p">브랜드 로고 등록 가이드를 확인해주세요.</p>
+                </div>
+                <ul>
+                    <li><span></span>500 x 500px (1:1 비율)로 로고 이미지를 등록해주세요.</li>
+                    <li><span></span>PNG, JPEG, JPG 확장자의 파일만 등록 가능합니다.</li>
+                    <li><span></span>상업적인 이용 및 허가에 대한 부분을 확인하시어 등록해주시기 바랍니다.</li>
+                    <li><span></span>무단 · 부정한 이용으로 제3자의 권리를 침해하는 브랜드 이미지는 등록할 수 없습니다.</li>
+                </ul>
+                <div>
+                    <p id="brand_delet_txt">삭제</p>
+                    <button id="setting_btn">수정</button>
+                </div>
+                
+            </div>
+        </div>
+       
+        <div class="toggle_menu" id="toggle_menu">
+            <div class="toggle_box">
+                <div class="toggle_close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 6.2225L14.2225 0L16 1.7775L9.7775 8L16 14.2225L14.2225 16L8 9.7775L1.7775 16L0 14.2225L6.2225 8L0 1.7775L1.7775 0L8 6.2225Z" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <p>haha@gmail.com</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_menu_icon6.png" alt="">
+                        </div>
+                        <p>마이스페이스</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_menu_icon1.png" alt="">
+                        </div>
+                        <p>이용권 소개</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_menu_icon2.png" alt="">
+                        </div>
+                        <p>이용권 현황</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_menu_icon3.png" alt="">
+                        </div>
+                        <p>결제카드</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_menu_icon4.png" alt="">
+                        </div>
+                        <p>쿠폰</p>
+                    </li>
+                    <li>
+                        <div class="toggle_icon_box">
+                            <img src="img/toggle_menu_icon5.png" alt="">
+                        </div>
+                        <p>고객센터</p>
+                    </li>
+                    
+                </ul>
+                <div>
+                    <p>서비스 이용약관</p>
+                    <p>개인정보처리방침</p>
+                </div>
+                <div>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.33317 13.4173C1.15636 13.4173 0.98679 13.3471 0.861766 13.2221C0.736742 13.097 0.666504 12.9275 0.666504 12.7507V0.750651C0.666504 0.57384 0.736742 0.404271 0.861766 0.279246C0.98679 0.154222 1.15636 0.0839844 1.33317 0.0839844H10.6665C10.8433 0.0839844 11.0129 0.154222 11.1379 0.279246C11.2629 0.404271 11.3332 0.57384 11.3332 0.750651V2.75065H9.99984V1.41732H1.99984V12.084H9.99984V10.7507H11.3332V12.7507C11.3332 12.9275 11.2629 13.097 11.1379 13.2221C11.0129 13.3471 10.8433 13.4173 10.6665 13.4173H1.33317ZM9.99984 9.41732V7.41732H5.33317V6.08398H9.99984V4.08398L13.3332 6.75065L9.99984 9.41732Z" fill="white"/>
+                    </svg>
+                    <p>로그아웃</p>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <div class="header_box">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M56.6146 10.9185H50.5898V29.7415H54.7216V23.493H56.7293C60.3533 23.493 63.5143 21.52 63.5143 17.0426C63.5188 12.3851 60.3989 10.9185 56.6146 10.9185ZM56.5251 19.923H54.7252V14.4845H56.4096C58.394 14.4845 59.5017 15.1422 59.5017 17.0396C59.4981 18.8873 58.5301 19.923 56.5215 19.923H56.5251Z" fill="white"/>
+                            <path d="M69.624 10.9185H65.4922V29.7415H76.2944V25.9466H69.6249L69.624 10.9185Z" fill="white"/>
+                            <path d="M99.1238 18.7708H99.0343C98.5498 17.3042 96.2189 10.9185 96.2189 10.9185H91.8311L97.0007 23.0861V29.7415H101.108V23.088L106.302 10.9204H101.987C101.987 10.9204 99.6083 17.3042 99.1238 18.7708Z" fill="white"/>
+                            <path d="M112.523 25.9446L119.931 13.6248V10.9185H108.161V14.6616H114.854L107.445 27.0063V29.7415H120V25.9466L112.523 25.9446Z" fill="white"/>
+                            <path d="M38.6403 10.9185L33.3086 29.7415H37.5084L40.9712 14.8068L44.5711 29.7415H48.9097L43.5771 10.9185H38.6403Z" fill="white"/>
+                            <path d="M41.1102 25.6749C40.7497 25.6805 40.3988 25.8045 40.1015 26.0312C39.8042 26.2579 39.5739 26.5772 39.4395 26.9489C39.305 27.3206 39.2725 27.7282 39.346 28.1204C39.4194 28.5126 39.5956 28.8719 39.8523 29.1532C40.1091 29.4344 40.4349 29.6251 40.7889 29.7012C41.1429 29.7773 41.5092 29.7354 41.8418 29.5808C42.1744 29.4262 42.4585 29.1658 42.6583 28.8323C42.8581 28.4989 42.9647 28.1072 42.9648 27.7066C42.9631 27.4379 42.9138 27.1722 42.8197 26.9246C42.7256 26.677 42.5886 26.4525 42.4163 26.2638C42.2441 26.0751 42.0401 25.926 41.816 25.825C41.5919 25.7239 41.3521 25.6729 41.1102 25.6749Z" fill="white"/>
+                            <path d="M9.64077 11.4397L13.8495 26.3097L20.5289 15.1828H13.8361V11.4387H21.6402L6.21555 0.692925C5.60187 0.265954 4.89719 0.0276039 4.17348 0.00225683C3.44978 -0.0230903 2.73299 0.165455 2.09633 0.548634C1.46489 0.925871 0.936831 1.48553 0.567861 2.16851C0.198891 2.8515 0.00269572 3.63251 0 4.42908V28.0101L4.69591 11.4297L9.64077 11.4397Z" fill="white"/>
+                            <path d="M28.4498 16.1799L25.5843 14.1899L18.1992 26.471H24.4228L28.4525 23.6661C29.0258 23.2716 29.499 22.721 29.8271 22.0663C30.1553 21.4117 30.3275 20.6748 30.3275 19.9255C30.3275 19.1762 30.1553 18.4393 29.8271 17.7847C29.499 17.13 29.0258 16.5794 28.4525 16.1849L28.4498 16.1799Z" fill="white"/>
+                            <path d="M7.03262 15.3252L3.57069 30.2609H0.00488281V35.4039C0.00738667 36.2005 0.20348 36.9816 0.572471 37.6646C0.941461 38.3477 1.46964 38.9073 2.1012 39.2843C2.73786 39.6674 3.45458 39.8559 4.17823 39.8307C4.90188 39.8056 5.60656 39.5676 6.22042 39.141L18.9766 30.2569H10.6351L7.03262 15.3252ZM7.17053 30.2609C6.81006 30.2552 6.45914 30.1312 6.16188 29.9046C5.86463 29.6779 5.6343 29.3587 5.49985 28.9871C5.3654 28.6154 5.33282 28.2079 5.40621 27.8157C5.4796 27.4235 5.65568 27.0642 5.91232 26.7829C6.16897 26.5016 6.49472 26.3109 6.84865 26.2347C7.20257 26.1585 7.56888 26.2002 7.90151 26.3546C8.23415 26.5091 8.51827 26.7693 8.71818 27.1027C8.91809 27.436 9.02486 27.8276 9.02507 28.2281C9.02343 28.4969 8.97416 28.7627 8.88007 29.0103C8.78598 29.2579 8.64892 29.4825 8.47671 29.6712C8.3045 29.86 8.10051 30.0092 7.8764 30.1104C7.65228 30.2116 7.41243 30.2627 7.17053 30.2609Z" fill="white"/>
+                            <path d="M83.572 10.9185L78.2412 29.7415H82.4419L85.9039 14.8068L89.5037 29.7415H93.8432L88.5115 10.9214L83.572 10.9185Z" fill="white"/>
+                            <path d="M86.0428 25.6749C85.6822 25.6804 85.3312 25.8042 85.0338 26.0307C84.7364 26.2573 84.5059 26.5765 84.3714 26.9482C84.2368 27.3199 84.2041 27.7275 84.2775 28.1198C84.3509 28.5121 84.527 28.8715 84.7837 29.1529C85.0404 29.4342 85.3662 29.625 85.7202 29.7011C86.0742 29.7773 86.4406 29.7355 86.7733 29.5809C87.1059 29.4263 87.3901 29.1659 87.5899 28.8325C87.7897 28.499 87.8964 28.1073 87.8964 27.7066C87.8949 27.4379 87.8457 27.1722 87.7517 26.9247C87.6577 26.6771 87.5207 26.4526 87.3486 26.2639C87.1764 26.0752 86.9725 25.926 86.7484 25.825C86.5244 25.7239 86.2846 25.6729 86.0428 25.6749Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="right_menu">
+                    <div class="alarm_box">
+                        <img src="img/alarm_active.png" alt=""></a>
+                    </div>
+                    <div class="shop_info">
+                        <a href="">
+                            <p>haha@gmail.com</p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.333374 7.00001C0.333374 6.42334 0.406707 5.86468 0.544041 5.33068C0.912351 5.35004 1.27884 5.26718 1.603 5.09126C1.92716 4.91533 2.19636 4.6532 2.38084 4.33384C2.56533 4.01448 2.65791 3.65032 2.64836 3.28162C2.6388 2.91293 2.52748 2.55406 2.32671 2.24468C3.13267 1.45172 4.12724 0.877007 5.21671 0.574677C5.38403 0.903658 5.63913 1.17992 5.95376 1.37288C6.26839 1.56585 6.63028 1.66798 6.99937 1.66798C7.36846 1.66798 7.73035 1.56585 8.04499 1.37288C8.35962 1.17992 8.61471 0.903658 8.78204 0.574677C9.87151 0.877007 10.8661 1.45172 11.672 2.24468C11.471 2.55411 11.3596 2.91312 11.3499 3.28199C11.3403 3.65085 11.4329 4.01519 11.6175 4.33468C11.8021 4.65418 12.0715 4.91639 12.3958 5.09229C12.7202 5.26819 13.0869 5.35092 13.4554 5.33134C13.5927 5.86468 13.666 6.42334 13.666 7.00001C13.666 7.57668 13.5927 8.13534 13.4554 8.66934C13.087 8.64985 12.7204 8.73262 12.3962 8.90849C12.0719 9.08435 11.8026 9.34648 11.618 9.66586C11.4335 9.98525 11.3408 10.3495 11.3504 10.7182C11.3599 11.087 11.4712 11.4459 11.672 11.7553C10.8661 12.5483 9.87151 13.123 8.78204 13.4253C8.61471 13.0964 8.35962 12.8201 8.04499 12.6271C7.73035 12.4342 7.36846 12.332 6.99937 12.332C6.63028 12.332 6.26839 12.4342 5.95376 12.6271C5.63913 12.8201 5.38403 13.0964 5.21671 13.4253C4.12724 13.123 3.13267 12.5483 2.32671 11.7553C2.52771 11.4459 2.63919 11.0869 2.64882 10.718C2.65845 10.3492 2.56584 9.98483 2.38125 9.66534C2.19666 9.34584 1.92728 9.08363 1.60291 8.90773C1.27855 8.73183 0.911843 8.6491 0.543374 8.66868C0.406707 8.13601 0.333374 7.57734 0.333374 7.00001ZM3.53604 9.00001C3.95604 9.72734 4.07604 10.564 3.91204 11.3493C4.18404 11.5427 4.47337 11.71 4.77671 11.8493C5.38782 11.3019 6.17958 10.9994 7.00004 11C7.84004 11 8.62537 11.314 9.22337 11.8493C9.52671 11.71 9.81604 11.5427 10.088 11.3493C9.91966 10.5467 10.0536 9.71006 10.464 9.00001C10.8738 8.28959 11.5314 7.75545 12.3107 7.50001C12.3415 7.16739 12.3415 6.83263 12.3107 6.50001C11.5311 6.24472 10.8733 5.71056 10.4634 5.00001C10.0529 4.28996 9.919 3.45337 10.0874 2.65068C9.81545 2.45729 9.52596 2.28989 9.22271 2.15068C8.61177 2.69797 7.82027 3.00042 7.00004 3.00001C6.17958 3.00058 5.38782 2.69812 4.77671 2.15068C4.47346 2.28989 4.18397 2.4573 3.91204 2.65068C4.08042 3.45337 3.94652 4.28996 3.53604 5.00001C3.12629 5.71043 2.4687 6.24457 1.68937 6.50001C1.65854 6.83263 1.65854 7.16739 1.68937 7.50001C2.46894 7.7553 3.12679 8.28947 3.53671 9.00001H3.53604ZM7.00004 9.00001C6.46961 9.00001 5.9609 8.7893 5.58583 8.41422C5.21075 8.03915 5.00004 7.53044 5.00004 7.00001C5.00004 6.46958 5.21075 5.96087 5.58583 5.5858C5.9609 5.21072 6.46961 5.00001 7.00004 5.00001C7.53047 5.00001 8.03918 5.21072 8.41426 5.5858C8.78933 5.96087 9.00004 6.46958 9.00004 7.00001C9.00004 7.53044 8.78933 8.03915 8.41426 8.41422C8.03918 8.7893 7.53047 9.00001 7.00004 9.00001ZM7.00004 7.66668C7.17685 7.66668 7.34642 7.59644 7.47145 7.47141C7.59647 7.34639 7.66671 7.17682 7.66671 7.00001C7.66671 6.8232 7.59647 6.65363 7.47145 6.52861C7.34642 6.40358 7.17685 6.33334 7.00004 6.33334C6.82323 6.33334 6.65366 6.40358 6.52864 6.52861C6.40361 6.65363 6.33337 6.8232 6.33337 7.00001C6.33337 7.17682 6.40361 7.34639 6.52864 7.47141C6.65366 7.59644 6.82323 7.66668 7.00004 7.66668Z" fill="#DDDDDD"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="toggle">
+                        <img src="img/toggle_btn.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main">
+            <div class="group_store">
+                <div class="group_store_title">
+                    <h2>브랜드 관리</h2>
+                </div>
+                <div class="brand_management_content">
+                    <div class="brand_management">
+                        <div class="group_tab_setting">
+                            <img src="img/setting_icon.svg" lat="">
+                        </div>
+                        <img src="img/brand_thumnail.png" alt="">
+                        <div>
+                            <h4>투썸플레이스  역삼점</h4>
+                            <p id="rjwjf">승인거절</p>
+                        </div>
+                    </div>
+                    <div class="brand_management">
+                        <div class="group_tab_setting">
+                            <img src="img/setting_icon.svg" lat="">
+                        </div>
+                        <img src="img/brand_thumnail.png" alt="">
+                        <div>
+                            <h4>투썸플레이스  역삼점</h4>
+                            <p id="dhksfy">승인완료</p>
+                        </div>
+                    </div>
+                    <div class="brand_management empty">
+                        <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="path-1-outside-1_860_17166" maskUnits="userSpaceOnUse" x="0" y="0.5" width="48" height="48" fill="black">
+                            <rect fill="white" y="0.5" width="48" height="48"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1597 24.3403V1.5H23.8403V24.3403H1V24.6598H23.8403V47.5H24.1597V24.6598H47V24.3403H24.1597Z"/>
+                            </mask>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1597 24.3403V1.5H23.8403V24.3403H1V24.6598H23.8403V47.5H24.1597V24.6598H47V24.3403H24.1597Z" fill="#C4C4C4"/>
+                            <path d="M24.1597 1.5H25.1597V0.5H24.1597V1.5ZM24.1597 24.3403H23.1597V25.3403H24.1597V24.3403ZM23.8403 1.5V0.5H22.8403V1.5H23.8403ZM23.8403 24.3403V25.3403H24.8403V24.3403H23.8403ZM1 24.3403V23.3403H0V24.3403H1ZM1 24.6598H0V25.6598H1V24.6598ZM23.8403 24.6598H24.8403V23.6598H23.8403V24.6598ZM23.8403 47.5H22.8403V48.5H23.8403V47.5ZM24.1597 47.5V48.5H25.1597V47.5H24.1597ZM24.1597 24.6598V23.6598H23.1597V24.6598H24.1597ZM47 24.6598V25.6598H48V24.6598H47ZM47 24.3403H48V23.3403H47V24.3403ZM23.1597 1.5V24.3403H25.1597V1.5H23.1597ZM23.8403 2.5H24.1597V0.5H23.8403V2.5ZM24.8403 24.3403V1.5H22.8403V24.3403H24.8403ZM1 25.3403H23.8403V23.3403H1V25.3403ZM2 24.6598V24.3403H0V24.6598H2ZM23.8403 23.6598H1V25.6598H23.8403V23.6598ZM24.8403 47.5V24.6598H22.8403V47.5H24.8403ZM24.1597 46.5H23.8403V48.5H24.1597V46.5ZM23.1597 24.6598V47.5H25.1597V24.6598H23.1597ZM47 23.6598H24.1597V25.6598H47V23.6598ZM46 24.3403V24.6598H48V24.3403H46ZM24.1597 25.3403H47V23.3403H24.1597V25.3403Z" fill="white" mask="url(#path-1-outside-1_860_17166)"/>
+                        </svg>
+                        <p>브랜드 등록하기</p>
+                    </div>
+                </div>
+                <div class="payment_paging">
+                    <div><img src="img/big_pagenation_prev.png" alt=""></div>
+                    <div><img src="img/pagenation_prev.png" alt=""></div>
+                    <span class="on">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <div><img src="img/pagenation_next.png" alt=""></div>
+                    <div><img src="img/big_pagenation_next.png" alt=""></div>
+                </div>
+                
+            </div>          
+        </section>
+    </div>
+    <script>
+        $(".input_text").keyup(function (e){
+            var content = $(this).val();
+            var content2 = $(this).val();
+
+            $('#counter').html(" "+content.length+"/20");    //글자수 실시간 카운팅
+            $('#counter2').html(" "+content2.length+"/20"); 
+
+            if (content.length > 20 && content2.length > 20){
+                alert("최대 20자까지 입력 가능합니다.");
+                $(this).val(content.substring(0, 20));
+                $(this).val(content2.substring(0, 20));
+                $('#counter').html("20/20");
+                $('#counter2').html("20/20");
+               
+            }
+        });
+
+    </script>
+ 
+</body>
+</html>

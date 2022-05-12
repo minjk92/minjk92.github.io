@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/font.css" type="text/css">
+    <link rel="stylesheet" href="css/content.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="space_pc">
+            <div class="time_modal modal open_time">
+                <div class="time_modal_box modal_box">
+                    <ul class="time_modal_title modal_title">
+                        <li><p>09:30부터</p></li>
+                        
+                    </ul>
+                    <div class="select_box">
+                        <div class="select-box-area">
+                            <div class="label select-box">00 시</div>
+                            <div class="select-box-dropDown">
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="select-box-area">
+                            <div class="label select-box">00 분</div>
+                            <div class="select-box-dropDown"> 
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button id="prev_btn">취소</button>
+                        <button>적용</button>
+                    </div>
+                </div>
+            </div>
+            <div class="time_modal modal close_time">
+                <div class="time_modal_box modal_box">
+                    <ul class="time_modal_title modal_title">
+                        <li><p>22:30까지</p></li>
+                        
+                    </ul>
+                    <div class="select_box">
+                        <div class="select-box-area">
+                            <div class="label select-box">00 시</div>
+                            <div class="select-box-dropDown">
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="select-box-area">
+                            <div class="label select-box">00 분</div>
+                            <div class="select-box-dropDown"> 
+                                <ul class="optionList">
+                                    <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                    <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button id="prev_btn">취소</button>
+                        <button>적용</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toggle_menu" id="toggle_menu">
+                <div class="toggle_box">
+                    <div class="toggle_close">
+                        <h2>메뉴</h2>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 6.2225L14.2225 0L16 1.7775L9.7775 8L16 14.2225L14.2225 16L8 9.7775L1.7775 16L0 14.2225L6.2225 8L0 1.7775L1.7775 0L8 6.2225Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="toggle_email">
+                        <h2>haha@gmail.com</h2>
+                        <img src="img/toggle_setting.svg" alt="">
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="toggle_icon_box">
+                                <img src="img/toggle_icon1.svg" alt="">
+                            </div>
+                            <p>마이스페이스</p>
+                        </li>
+                        <li>
+                            <div class="toggle_icon_box">
+                                <img src="img/toggle_icon2.svg" alt="">
+                            </div>
+                            <p>이용권 소개</p>
+                        </li>
+                        <li>
+                            <div class="toggle_icon_box">
+                                <img src="img/toggle_icon3.svg" alt="">
+                            </div>
+                            <p>이용권 현황</p>
+                        </li>
+                        <li>
+                            <div class="toggle_icon_box">
+                                <img src="img/toggle_icon4.svg" alt="">
+                            </div>
+                            <p>결제카드</p>
+                        </li>
+                        <li>
+                            <div class="toggle_icon_box">
+                                <img src="img/toggle_icon5.svg" alt="">
+                            </div>
+                            <p>쿠폰</p>
+                        </li>
+                        <li>
+                            <div class="toggle_icon_box">
+                                <img src="img/toggle_icon6.svg" alt="">
+                            </div>
+                            <p>고객센터</p>
+                        </li>
+                        
+                    </ul>
+                    <div>
+                        <p>서비스 이용약관</p>
+                        <p>개인정보처리방침</p>
+                    </div>
+                    <div>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.33317 13.4173C1.15636 13.4173 0.98679 13.3471 0.861766 13.2221C0.736742 13.097 0.666504 12.9275 0.666504 12.7507V0.750651C0.666504 0.57384 0.736742 0.404271 0.861766 0.279246C0.98679 0.154222 1.15636 0.0839844 1.33317 0.0839844H10.6665C10.8433 0.0839844 11.0129 0.154222 11.1379 0.279246C11.2629 0.404271 11.3332 0.57384 11.3332 0.750651V2.75065H9.99984V1.41732H1.99984V12.084H9.99984V10.7507H11.3332V12.7507C11.3332 12.9275 11.2629 13.097 11.1379 13.2221C11.0129 13.3471 10.8433 13.4173 10.6665 13.4173H1.33317ZM9.99984 9.41732V7.41732H5.33317V6.08398H9.99984V4.08398L13.3332 6.75065L9.99984 9.41732Z" fill="white"/>
+                        </svg>
+                        <p>로그아웃</p>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header">
+                <div class="header_box">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/suv_logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="right_menu">
+                        <div class="shop_info">
+                            <a href="">
+                                <img src="img/header_shop.png" alt="">
+                                <p>투썸플레이스 강남점</p>
+                            </a>
+                        </div>
+                        <div class="alarm_box">
+                            <img src="img/alarm_icon_active.svg" alt=""></a>
+                        </div>
+                        <div class="toggle">
+                            <img src="img/toggle.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </header>
+    
+            <section class="main myspace w_940">
+                <div class="main_box">
+                    <div class="main_box_title">
+                        <h1>자동재생 설정</h1>
+                        <div>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.81055 7.39387L16.8109 0.393555L18.8105 2.39324L11.8102 9.39355L18.8105 16.3939L16.8109 18.3936L9.81055 11.3932L2.81023 18.3936L0.810547 16.3939L7.81086 9.39355L0.810547 2.39324L2.81023 0.393555L9.81055 7.39387Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="cs_main">
+                        <div class="myspace_content frenchise" id="frenchise1">
+                            <div class="alarm_setting no_pd">
+                                <p>자동 재생기능</p>
+                                <div class="alarm_btn_box">
+                                    <div class="email_alarm">
+                                        <div class="alarm_box" id="alarm_box1">
+                                            <span></span>
+                                            <span class="move"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice_date choice_date1">
+                                <p>요일 설정</p>
+                                <div>
+                                    <span>월</span>
+                                    <span>화</span>
+                                    <span>수</span>
+                                    <span>목</span>
+                                    <span>금</span>
+                                    <span>토</span>
+                                    <span>일</span>
+                                </div>
+                                <div class="set_clock">
+                                    <p>시간</p>
+                                    <div>
+                                        <div class="start_clock start_clock1">
+                                            <p>09:30</p>
+                                        </div>
+                                        ~
+                                        <div class="end_clock end_clock1">
+                                            <p>23:30</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="auto_play_notice auto_play_notice1">
+                                <h5>유의사항</h5>
+                                <ul>
+                                    <li><span></span><p>설정하신 시간에 플레이어가 자동으로 on/off 됩니다.</p> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+                   
+                </div>
+            </section>
+        </div>
+        <div class="space_mo">
+            <div class="back_dim"></div>
+
+            <div class="time_modal_box modal_box open_time2">
+                <!--<div class="time_modal_title modal_title">
+                    <h2>9:30 부터</h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0007 10.5862L16.9507 5.63623L18.3647 7.05023L13.4147 12.0002L18.3647 16.9502L16.9507 18.3642L12.0007 13.4142L7.05072 18.3642L5.63672 16.9502L10.5867 12.0002L5.63672 7.05023L7.05072 5.63623L12.0007 10.5862Z" fill="white"/>
+                    </svg>
+                </div>-->
+                <div class="select_box">
+                    <div class="select-box-area">
+                        <div class="label select-box">00 시</div>
+                        <div class="select-box-dropDown">
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="select-box-area">
+                        <div class="label select-box">00 분</div>
+                        <div class="select-box-dropDown"> 
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_bottom modal_bottom_btn">
+                    <button id="m_form_btn">확인</button>
+                </div>
+            </div>
+
+
+            <div class="time_modal_box modal_box close_time2">
+                <!--<div class="time_modal_title modal_title">
+                    <h2>23:00 부터</h2>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0007 10.5862L16.9507 5.63623L18.3647 7.05023L13.4147 12.0002L18.3647 16.9502L16.9507 18.3642L12.0007 13.4142L7.05072 18.3642L5.63672 16.9502L10.5867 12.0002L5.63672 7.05023L7.05072 5.63623L12.0007 10.5862Z" fill="white"/>
+                    </svg>
+                </div>-->
+                <div class="select_box">
+                    <div class="select-box-area">
+                        <div class="label select-box">00 시</div>
+                        <div class="select-box-dropDown">
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>01 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>02 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>03 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>04 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>05 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>06 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>07 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>08 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>09 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>10 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>11 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>12 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>13 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>14 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>15 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>16 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>17 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>18 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>19 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>20 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>21 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>22 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>23 시</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>24 시</p><img src="img/space_check_none.png"></li>
+                              </ul>
+                        </div>
+                    </div>
+                    <div class="select-box-area">
+                        <div class="label select-box">00 분</div>
+                        <div class="select-box-dropDown"> 
+                            <ul class="optionList">
+                                <li class="optionItem"><p>00 분</p><img src="img/space_check_none.png"></li>
+                                <li class="optionItem"><p>30 분</p><img src="img/space_check_none.png"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_bottom modal_bottom_btn">
+                    <button id="m_form_btn">확인</button>
+                </div>
+            </div>
+
+
+            <div class="mo_space_header">
+                <div class="mo_header_box">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.828 7.00072L7.778 11.9507L6.364 13.3647L0 7.00072L6.364 0.636719L7.778 2.05072L2.828 7.00072Z" fill="white"/>
+                    </svg>     
+                    <h2>자동재생 설정</h2>
+                    <div>
+                    </div>
+                </div>
+            </div>
+           
+            <section class="main myspace auto_play">
+                <div class="main_box">
+    
+                    <div class="cs_main">
+                        <!--<div class="side_depth_box">
+                            <div class="one_depth">
+                                <a class="one_depth_btn" href="myspace_1.html"><span></span>스페이스 설정</a>
+                                <a class="one_depth_btn" href="myspace_2.html"><span></span>큐레이션 설정</a>
+                                <a class="one_depth_btn" href="myspace_5.html"><span></span>프랜차이즈 연결</a>
+                                <a class="one_depth_btn on" href="myspace_6.html"><span class="on"></span>자동재생 설정</a>
+                            </div>
+                        </div>-->
+                        <div class="myspace_content frenchise" id="frenchise2">
+                            <div class="alarm_setting no_pd">
+                                <p>자동 재생기능</p>
+                                <div class="alarm_btn_box">
+                                    <div class="email_alarm">
+                                        <div class="alarm_box" id="alarm_box2">
+                                            <span></span>
+                                            <span class="move"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice_date choice_date2">
+                                <p>요일 설정</p>
+                                <div>
+                                    <span>월</span>
+                                    <span>화</span>
+                                    <span>수</span>
+                                    <span>목</span>
+                                    <span>금</span>
+                                    <span>토</span>
+                                    <span>일</span>
+                                </div>
+                                <div class="set_clock">
+                                    <p>시간</p>
+                                    <div>
+                                        <div class="start_clock start_clock2">
+                                            <p>09:30</p>
+                                        </div>
+                                        ~
+                                        <div class="end_clock end_clock2">
+                                            <p>23:30</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="auto_play_notice auto_play_notice2">
+                                <h5>유의사항</h5>
+                                <ul>
+                                    <li><span></span><p>설정하신 시간에 플레이어가 자동으로 on/off 됩니다.</p> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="form_bottom">
+                <button>확인</button>
+            </div>
+        </div>
+        
+
+    </div>
+
+</body>
+</html>

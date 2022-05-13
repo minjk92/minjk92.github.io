@@ -254,17 +254,49 @@ $(document).ready(function(){
     });
     
     
-
+// 5/13 수정
     $(".spot").hide();
     $("#service").click(function(){
         $(".service").show();
         $(".spot").hide();
+        $(".spot2").hide();
     });
 
     $("#spot").click(function(){
         $(".service").hide();
         $(".spot").show();
+        $(".spot2").hide();
     });
+
+
+
+
+    $(".spot2").hide();
+    $("#service").click(function(){
+        $(".service").show();
+        $(".spot2").hide();
+        $(".spot").hide();
+    });
+
+    $("#spot2").click(function(){
+        $(".service").hide();
+        $(".spot2").show();
+        $(".spot").hide();
+    });
+
+    $(".spot2").hide();
+    $("#spot").click(function(){
+        $(".spot").show();
+        $(".spot2").hide();
+        $(".service").hide();
+    });
+
+    $("#spot2").click(function(){
+        $(".spot").hide();
+        $(".spot2").show();
+        $(".service").hide();
+    });
+
 
 
 

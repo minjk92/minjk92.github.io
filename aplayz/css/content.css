@@ -985,6 +985,8 @@ body {width:100%; background:#151515;}
 .new_space > div:nth-of-type(2) {width:200px; height:200px;border-radius:8px 0 0 8px; }
 .new_space > div:nth-of-type(3) {width:100%; padding:24px; overflow:hidden;}
 
+
+/* 5/13 퍼블 수정 */
 .new_space .new_space_span {display:flex; align-items:center; margin-bottom:8px;}
 .new_space .new_space_span span {display:inline-block;padding:0 8px; border-radius:50px; font-size:14px; font-weight:400; margin-right:8px;}
 .new_space .new_space_span span#subscribe {background: rgba(255, 137, 145, 0.16);color: #FD4E6D;}
@@ -992,13 +994,13 @@ body {width:100%; background:#151515;}
 .new_space .new_space_span span#eorl {background: rgba(156, 255, 110, 0.16);color:#98DB78;}
 .new_space .new_space_span span#dhksfy { color: #ccc;background: rgba(255, 255, 255, 0.16);}
 .new_space .new_space_span span#rjwjf { color: #EB9F46;background: rgba(235, 159, 70, 0.16);}
-.new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:8px;}
+.new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:28px;}
 .new_space > div:nth-of-type(3) p {color: rgba(255, 255, 255, 0.60); font-size:14px; margin-bottom:27px;}
-.new_space > div:nth-of-type(3) > div:last-child {display:flex; justify-content:flex-start; align-items:center; border-top:1px solid rgba(255, 255, 255, 0.04); padding-top:12px; overflow:hidden;}
-.new_space > div:nth-of-type(3) div:last-child span {display:inline-block; background: rgba(255, 255, 255, 0.1); border-radius: 4px; padding:2px 12px; margin-right:6px;color: rgba(255, 255, 255, 0.6);font-size:14px; white-space:nowrap;}
+.new_space > div:nth-of-type(3) > div:last-child {display:flex; flex-wrap: wrap; justify-content:flex-start; align-items:center; border-top:0px solid rgba(255, 255, 255, 0.04); padding-top:6px; overflow:hidden;}
+.new_space > div:nth-of-type(3) div:last-child span {display:inline-block; background: rgba(255, 255, 255, 0.1); border-radius: 4px; padding:2px 12px; margin-right:6px; margin-top:6px; color: rgba(255, 255, 255, 0.6);font-size:14px; white-space:nowrap;}
 
 .new_space .payment_paging {margin-top:120px;}
-
+/* 5/13 퍼블 수정 끝 하단에 또 있습니다.*/
 
 
 /*myspace_0_1(이전 버전)*/
@@ -1682,6 +1684,8 @@ body {width:100%; background:#151515;}
 
 @media all and (max-width:1280px){
   .player_main.full .player_main_box {transform: translate(-46%, -50%);}
+  /* 5/13 퍼블 수정 */
+  .new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:24px;}
 
 }
 
@@ -1795,13 +1799,24 @@ body {width:100%; background:#151515;}
   .myspace .main_box {width:90%;}
   .card_ui { display:flex; flex-wrap:wrap; justify-content:flex-start; align-items:flex-start; margin-bottom:36px;}
   .card_ui > ul:nth-child(2n-1) { margin-right:32px; }
-
   
+  /* 5/13 퍼블 수정 */
+  .new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:16px;}
+  .new_space > div:nth-of-type(3) > div:last-child {padding-top:6px;}
+
+
   /*myspace_2*/
   .quation_btn {padding-top:30px !important;justify-content:flex-end; }
 
 
 
+}
+
+
+@media all and (max-width:1110px){
+ /* 5/13 퍼블 수정 */
+ .new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:0px;}
+ .new_space > div:nth-of-type(3) > div:last-child {padding-top:6px;}
 }
 
 @media all and (max-width:1024px){
@@ -1823,6 +1838,7 @@ body {width:100%; background:#151515;}
   .player_main.empty .play_img_box {width:430px;margin:0;}
   .player_main.empty .play_img_box img {width:430px;}
   .player_main .play_main_txt h1 {font-size:40px;}
+
 
 }
 
@@ -1982,13 +1998,16 @@ body {width:100%; background:#151515;}
   /*myspace_0_1*/
   .my_space_content {display:block;}
   .new_space {width:100%; }
+  /* 5/13 퍼블 수정 */
+  .new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:0px;}
+ 
 
 
   /*myspace_5*/
   .search_brand {display:flex; flex-wrap:wrap;}
 
   /*space_0*/
- .registration .main_box {width:90%; }
+ .registration .main_box {width:90%;}
  .registration .two_box {display:flex;flex-wrap:wrap; flex-direction:column;justify-content:center; align-items:center; }
  .registration .shop_regi, .registration .car_regi {width:100%;}
  .registration .shop_regi {margin-bottom:24px;}

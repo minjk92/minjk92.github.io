@@ -114,7 +114,7 @@ transform: translate(-50%,-31%);}
 .tt04_txt{position: relative;margin: auto; width: 152px; margin:0 0 0 46.539vw;}
 .tt04_txt:after{content: '';position: absolute;top: 27px;right: -12px;width: 11px;height: 36.5px;}
 .tt04_txt img{width: 100%;}
-.tt04_img{width: 100%; margin: 12px auto;}
+.tt04_img{width: 100%; margin: 0px auto;}
 .tt04_img img{width: 100%;}
 .tutorial_box .ttl04{position: relative;}
 

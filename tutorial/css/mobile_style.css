@@ -117,6 +117,15 @@ transform: translate(-50%,-31%);}
 .tt04_img img{width: 100%;}
 .tutorial_box .ttl04{position: relative;}
 
+.tt04_txt{position: relative;margin: auto; width: 152px; margin:0 0 0 46.539vw;}
+ .tt04_txt:after{content: '';position: absolute;top: 27px;right: -12px;width: 11px;height: 36.5px;}
+ .tt04_txt img{width: 100%;}
+ .tt04_img{width: 100%; margin: 12px auto;}
+ .tt04_img{width: 100%; margin: 0px auto;}
+ .tt04_img img{width: 100%;}
+ .tutorial_box .ttl04{position: relative;}
+
+
 
 /* 브랜드음악설정 */
 .tutorial_box .ttl05 .con_inr05{position: absolute;top: 40%;left: 50%;-webkit-transform: translate(-50%,-31%);

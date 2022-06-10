@@ -10,6 +10,11 @@
     <script src="js/script.js" type="text/javascript"></script>
 
 </head>
+
+<style>
+.loading_text{position: relative; display:block; }
+</style>
+
 <body>
     <div class="wrap">
         <header class="header">
@@ -22,26 +27,14 @@
                 
             </div>
         </header>
+
+        <div class="test_contents">
+          <img src="images/app/bgm_bg.png" alt="">
+      </div>
+
         <section class="loading h_100">
-            <!--<div class="loader loader--style8" title="7">
-                <svg version="1.1" id="Layer_1"  width="30px" height="90px"  fill="#FF2D55" viewBox="0 0 30 30" xml:space="preserve">
-                  <rect x="0" y="0" width="6" height="30"  fill="#FF2D55" opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .4" begin="0s" dur="1s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="20; 50; 20" begin="0s" dur="1s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="20; 5; 20" begin="0s" dur="1s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="12" y="0" width="6" height="30" fill="#FF2D55"  opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .4" begin="0.15s" dur="1s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="20; 50; 20" begin="0.15s" dur="1s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="20; 5; 20" begin="0.15s" dur="1s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="24" y="0" width="6" height="30" fill="#FF2D55"  opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .4" begin="0.3s" dur="1s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="20; 50; 20" begin="0.3s" dur="1s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="20; 5; 20" begin="0.3s" dur="1s" repeatCount="indefinite" />
-                  </rect>
-                </svg>
-              </div>-->
+          <ul>
+            <li>
               <div class="loader loader--style8" title="7">
                 <svg version="1.1" id="Layer_1"fill="#FF2D55" x="0px" y="0px"
                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
@@ -62,6 +55,13 @@
                   </rect>
                 </svg>
               </div>
+            </li>
+            <li>
+              <div class="loading_text">
+                <p style="color:#fff; font-size:16px;">플레이리스트를 불러오는 중 입니다.</p>
+              </div>
+            </li>
+            </ul>
         </section>
 
     </div>

@@ -1653,6 +1653,32 @@ body {width:100%; background:#151515;}
 .check_ball {display:block;width:200px; height:190px; margin:0 auto; !important;}
 .check_ball div {position:absolute; z-index:2;display:flex; justify-content:center; align-items:center; width:174px; height:174px; }
 
+/* 6/17 event */
+.event .main_box {width:90%;}
+.main.event {padding-top:132px;}
+.event .main_box {width:1200px; margin:0 auto; max-width:1200px;}
+.event .main_box h1 {display:flex; justify-content:flex-start; align-items:center;color:#fff; font-size:38px; font-weight:500;}
+
+.wrap-events-thumb-list ul li {
+  float: left;
+  width: 378px;
+  margin: 40px 32px 0 0;
+  box-shadow: none;
+}
+.wrap-events-thumb-list ul li .end-day{
+  font-size: 14px;
+  height: 24px;
+  padding: 3px 8px 0;
+}
+.wrap-events-thumb-list ul figure{
+  overflow: hidden;
+  position: relative;
+  width: 384px;
+}
+.wrap-events-thumb-list ul figure img{
+  width: 384px;
+  height: 280px;
+}
 
 
 
@@ -3014,6 +3040,19 @@ body {width:100%; background:#151515;}
 .check_box > p {color: rgba(255, 255, 255, 0.64);font-size:16px; text-align:center;}
 /* 수정 끝 */
 
+
+/* 6/10  check page */
+.main.playload {width:100%; padding-top:80px;}
+.check .playload_box {width:100%; margin:0 auto; max-width:940px;}
+.check_ball {align-items:center; display:block; width:200px; height:190px; margin:0 auto !important; padding-left: 12px;}
+.check_ball div {position:absolute; z-index:2;display:flex; justify-content:center; align-items:center; }
+
+.check_box {margin:0 auto;display:flex; flex-direction:column;}
+.check_box h1 {color:#fff; font-weight:500; font-size:48px; margin-bottom:24px;text-align:center; letter-spacing: -1.5px;}
+.check_box input {width:100%;margin-bottom:8px;}
+.check_box > p {color: rgba(255, 255, 255, 0.64);font-size:16px; text-align:center;}
+
+/* 수정 끝 */
 
 
 

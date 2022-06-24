@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/font.css" type="text/css">
-    <link rel="stylesheet" href="css/content.css" type="text/css">
+    <link rel="stylesheet" href="css/content3.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js" type="text/javascript"></script>
 
@@ -125,17 +125,16 @@
             </div>
         </header>
 
-        <section class="main notifiacation h_100">
+        <section class="main event h_100">
             <div class="main_box">
-                <h1>알림함</h1>
-                <div class="notifiacation_content hidden_menu">
+                <h1>이벤트</h1>
+                <div class="event_content event_menu">
                     <ul>
                         <li>
-                            <p>공통</p>
-                            <h3>1월 23일(금) 새벽1시부터 5시가지 서버점검이 있을 예정입니다. 
-                            </h3>
+                            <h3>1월 23일(금) 새벽1시부터 5시가지 서버점검이 있을 예정입니다.</h3>
+                            <p>22 . 01 . 23 10:25</p>
                         </li>
-                        <li><p>22.01.23 10:25</p></li>
+                        <li><p class="end-day">D-23</p></li>
                     </ul>
                     <div class="return_txt">
                         <p>
@@ -152,8 +151,9 @@
                         </p>
                     </div>
 
-                    <!-- 5/12 추가사항 -->
-                    <div class="attach_file">
+
+                    <!-- 5/12 첨부파일추가 -->
+                    <!-- <div class="attach_file">
                         <p class="lable_attach">첨부파일</p>
                         <div>
                             <button><svg width="14" height="14" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,13 +167,42 @@
                         </div>
                          
                         </ul>
-                    </div>
-                    <!-- 5/12 추가사항 끝 -->
+                    </div> -->
+                    <!-- 5/12 첨부파일추가 -->
+
+                    <!-- 목록버튼 -->
 
                     <div class="hidden_btn">
                         <a href="notifiacation_0.html"><button>목록</button></a>
                     </div>
 
+                    <!-- 댓글영역 -->
+                    <div class="main comment">
+                        <h3>댓글<span>2</span></h3>
+                        <form>
+                            <div class="comment_wrap">
+                                <div class="comment_input">
+                                    <textarea class="text" onkeyup="adjustHeight" maxlength="3000" rows="1" spellcheck="false" height="auto" placeholder="댓글을 입력해주세요."></textarea>
+                                    <p>0<span>/200</span></p>
+                                    <button><img src="../aplayz/img/btn_upload.svg"></button>
+                                </div>
+                            </div>
+                        </form>
+
+                     <!-- 댓글유저명 -->
+
+                     <div class="u_cbox_area">
+                         <div class="u_cbox_info">
+                             <span class="u_cbox_nick">minjk@illb.co.kr</span>
+                         </div>
+                         <div class="u_cbox_date">22.6.24</div>
+                     </div>
+
+                     <!-- 댓글내용 -->
+                     <div class="u_cbox_text_wrap">
+                         <span class="u_box_contents" data-lang="ko">댓글달았어요!!!</span>
+                     </div>
+                    </div>
                 </div>
             </div>
         </section>

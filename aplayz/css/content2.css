@@ -205,7 +205,7 @@ body {width:100%; background:#151515;}
 
 
 /* 6/17 event */
-.event {width:100%; margin:0 auto; padding:132px 0;}
+.event {width:96%; margin:0 auto; padding:82px 0;}
 .event .main_box {width:1200px; margin: 0 auto;}
 .swiper-wraaper{display: flex; margin-bottom:0.417vw;}
 .event .main_box .two_depth {display:flex; justify-content:flex-start; align-items:center;}

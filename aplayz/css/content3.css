@@ -276,7 +276,7 @@ body {width:100%; background:#151515;}
 
 
 @media all and (max-width:1110px){
- /* 5/13 퍼블 수정 */
+ /* 5/13 �쇰툝 �섏젙 */
  .new_space > div:nth-of-type(3) h3 {color: rgba(255, 255, 255, 0.87); font-size:20px; font-weight:400;margin-bottom:0px;}
  .new_space > div:nth-of-type(3) > div:last-child {padding-top:6px;}
 }

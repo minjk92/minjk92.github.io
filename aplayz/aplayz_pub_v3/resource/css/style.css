@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import 'common.css';
+
+/* box */
+.cont_wrap {-webkit-display:flex;display:flex;-webkit-flex-direction:row;flex-direction:row;-webkit-justify-content:space-between;justify-content:space-between}
+.cont_wrap.col2.ty1 .col_box_l {width:704px}
+.cont_wrap.col2.ty1 .col_box_r {width:480px}
+.cont_wrap.col2.ty2 .col_box_l {width:820px}
+.cont_wrap.col2.ty2 .col_box_r {width:364px}
+.cont_wrap.col2.ty3 .col_box_l {width:480px}
+.cont_wrap.col2.ty3 .col_box_r {width:704px}
+.cont_box {position:relative;padding:24px 32px;height:100%;border:1px solid rgba(255, 255, 255, 0.08);background:rgba(255, 255, 255, 0.08);border-radius:8px}
+.cont_box + .cont_box {margin-top:16px}
+.cont_box + .cont_wrap {margin-top:16px}
+.gradient {background:linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)) #151515 !important}
+.scroll {overflow-y:auto;position:relative;height:100%;margin-right:-28px;padding-right:24px}
+.scroll::-webkit-scrollbar {width:4px}
+.scroll::-webkit-scrollbar-thumb {background:#666;border-radius:30px;background:#666}
+
+/* no data */
+.no_data {position:absolute;left:50%;top:47%;transform:translate(-50%, -50%);text-align:center}
+.no_data p {font-size:14px;color:#fff;line-height:17px}
+.no_data .btn_sm2 {margin-top:10px}
+
+/* home */
+.board_box {padding:32px;height:288px}
+.board_info {-webkit-display:flex;display:flex;-webkit-flex-direction:row;flex-direction:row;-webkit-justify-content:space-between;justify-content:space-between;margin:0 40px;text-align:center}
+.board_info .board_tit {display:block;font-weight:400;line-height:23px;letter-spacing:-1px}
+.board_info .board_num {display:block;margin-top:5px;font-size:52px;line-height:62px;font-weight:500}
+.board_link {margin-top:32px;-webkit-display:flex;display:flex;-webkit-flex-direction:row;flex-direction:row;-webkit-justify-content:space-between;justify-content:space-between}
+.board_link a {position:relative;padding:24px 65px 26px 106px;width:calc((100% - 16px) / 2);height:102px;background:linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), #151515;border-radius:6px;font-size:18px;font-weight:500;line-height:26px;letter-spacing:-1px}
+.board_link a:before {content:'';position:absolute;left:24px;top:50%;transform:translateY(-50%);width:60px;height:60px;background:url('../images/icon_info.png') no-repeat center / 100%}
+.board_link a:after {content:'';position:absolute;right:24px;top:50%;transform:translateY(-50%) rotate(45deg);width:8px;height:8px;border:solid #fff;border-width:1px 1px 0 0}
+.live_box {height:351px}
+.live_box .scroll {height:calc(100% - 42px)}
+.live_box .tit_h5 {margin-bottom:8px}
+.live_list li {position:relative;padding:16px 150px 22px 56px}
+.live_list li + li {border-top:1px solid rgba(255, 255, 255, 0.12)}
+.live_list .live_img {position:absolute;left:0;top:16px;width:42px;height:42px;border-radius:50%;overflow:hidden}
+.live_list .live_tit {font-size:14px;font-weight:500;line-height:20px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.live_list .live_name {font-size:14px;font-weight:400;line-height:20px;letter-spacing:0}
+.live_list .btn_sm1 {position:absolute;top:16px;right:0}
+.alarm_box {height:655px}
+.alarm_box .scroll {height:calc(100% - 48px)}
+.alarm_box .tit_h5 {margin-bottom:14px}
+.list_ty1 > li {padding:10px 0 16px}
+.list_ty1 > li + li {border-top:1px solid rgba(255, 255, 255, 0.08)}
+.list_ty1 .list_tit {color:rgba(255, 255, 255, 0.87);font-weight:400;line-height:23px}
+.list_ty1 .list_txt {color:rgba(255, 255, 255, 0.4);font-size:14px;line-height:17px}
+.list_ty1 .list_tit + .list_txt {margin-top:8px}
+.list_ty1 .list_txt span {font-weight:400}
+.list_ty1 .list_txt span + span {margin-left:8px}
+
+/* 홍보곡 신청 */
+.box_ty1 {height:537px;padding:12px 28px 43px 28px;padding-bottom:43px}
+.box_ty1 .scroll {margin-right:-22px;padding-right:18px}
+.box_ty1.full .scroll {margin:0;padding:0}
+.box_ty1.full .scroll::-webkit-scrollbar {display:none}
+.box_ty1.full .tit_h5 {margin:0 28px}
+.box_ty1.full {padding-left:0;padding-right:0}
+.box_ty1.full .tbl_list td:first-of-type {padding-left:85px}
+.box_ty1.full .tbl_list td:last-of-type {padding-right:28px}
+.box_ty1.full .tbl_list .song_img {left:28px}
+.tbl_list .tbl_song_tit {position:relative;padding-left:57px;vertical-align:top}
+.song_img {width:42px;height:42px;overflow:hidden;position:absolute;top:20px;left:0}
+.song_tit {font-size:14px;font-weight:500;line-height:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.song_name {font-size:14px;font-weight:400;line-height:20px}
+.credit {display:inline-block;padding-left:20px;font-size:18px;font-weight:500;line-height:22px;background:url('../images/icon_credit.png') no-repeat left 5px / 16px}
+.fixed_btm {position:absolute;bottom:0;left:0;right:0;height:90px;padding:16px 19px;background:linear-gradient(0deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)) #151515}
+.fixed_btm .tit {font-size:14px;font-weight:400;line-height:17px}
+.fixed_btm .credit {padding-left:28px;margin-top:2px;font-size:32px;font-weight:500;line-height:38px;background-size:20px;background-position:left 12px}
+.fixed_btm .btn_md2 {position:absolute;top:22px;right:19px}
+.list_ty2 li {position:relative;padding:16px 58px 18px}
+.list_ty2 li {border-bottom:1px solid rgba(255, 255, 255, 0.08)}
+.list_ty2 .credit {position:absolute;top:50%;right:13px;transform:translateY(-50%)}
+
+/* 홍보현황 */
+.tab_wrap .srch_box {position:absolute;right:0;top:0}
+.detail_board {-webkit-display:flex;display:flex;height:100px}
+.detail_board > li {position:relative;width:20%;padding:24px 32px}
+.detail_board > li:not(:last-of-type) {border-right:1px solid rgba(255, 255, 255, 0.08)}
+.detail_board .board_tit {padding:29px 32px 29px 88px}
+.detail_board .song_img {top:29px;left:32px}
+.detail_board .song_tit {font-size:16px;font-weight:700;line-height:23px}
+.detail_board .detail_tit {font-size:14px;font-weight:400;letter-spacing:-1px;line-height:20px;opacity:0.87}
+.detail_board .credit {position:absolute;right:32px;margin-top:10px;font-size:20px;font-weight:600;line-height:24px}
+.detail_board .detail_txt {margin-top:10px;text-align:right}
+.detail_board .detail_txt span {font-size:20px;font-weight:400;line-height:24px}
+.graph_box1 {margin:37px auto;width:380px;height:380px}
+.graph_box2 {margin-top:25px}
+.graph_box3 {margin-top:14px}
+.info_txt {font-size:14px;font-weight:400;line-height:22px;color:rgba(255, 255, 255, 0.64);text-align:center}
+
+/* 크레딧 샵 */
+.tab_wrap .btn_icon_plus {position:absolute;right:0;top:-4px}
+.credit_box {-webkit-display:flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;height:73px;padding:0 28px}
+.credit_box + .tab_wrap {margin-top:46px}
+.credit_total, .credit_info, .credit_all {-webkit-display:flex;display:flex;-webkit-align-items:center;align-items:center;}
+.credit_total .tit {font-size:18px;font-weight:700;color:rgba(255, 255, 255, 0.87)}
+.credit_total .credit {margin-left:20px;padding-left:26px;font-size:24px;font-weight:700;color:#ff2d55;text-shadow:0 0 4px rgba(0, 0, 0, 0.2);line-height:29px;background:url('../images/icon_credit_red.png') no-repeat left 5px / 20px}
+.credit_all {position:relative}
+.credit_all:before {content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:24px;background:rgba(255, 255, 255, 0.16)}
+.credit_all .tit {font-weight:700;color:rgba(255, 255, 255, 0.64);line-height:32px}
+.credit_all .credit {margin-left:20px;padding-left:26px;font-size:28px;color:rgba(255, 255, 255, 0.64);line-height:34px;text-shadow:0 0 4px rgba(0, 0, 0, 0.2);background-size:20px;background-position:left 9px}
+
+.credit_info .tit {padding-left:20px;font-size:14px;font-weight:500;color:rgba(255, 255, 255, 0.87);background:url('../images/icon_exclamation.png') no-repeat left center / 15px auto}
+.credit_info .txt {margin-left:6px;font-size:14px;font-weight:400;line-height:20px;color:rgba(255, 255, 255, 0.64)}
+.credit_box.ty2, .credit_box.ty3 {-webkit-justify-content:center;justify-content:center;height:90px}
+.credit_box.ty2 .credit_total .credit, .credit_box.ty3 .credit_total .credit {font-size:38px;line-height:46px;background-position:left 15px}
+.credit_box.ty2 .credit_info {margin-left:136px}
+
+.credit_box.ty3 > div {-webkit-flex:1;flex:1;-webkit-justify-content:center;justify-content:center}
+
+.credit_shop_li {margin-top:24px}
+.credit_shop_li li {-webkit-display:flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;padding:0 28px;height:81px;background:linear-gradient(0deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)), #151515;border:1px solid rgba(255, 255, 255, 0.08);border-radius:8px}
+.credit_shop_li li + li {margin-top:12px}
+.credit_shop_li .credit_cont {-webkit-display:flex;display:flex;-webkit-align-items:center;align-items:center;}
+.credit_shop_li .credit_num {width:165px;color:#ff2d55;text-shadow:0 0 4px rgba(0, 0, 0, 0.2)}
+.credit_shop_li .credit_num .credit {padding-left:18px;font-size:24px;font-weight:700;line-height:29px;background:url('../images/icon_credit_red.png') no-repeat left 8px / 16px}
+.credit_shop_li .credit_num .plus {display:inline-block;margin:-10px 3px 0 2px;font-size:20px;vertical-align:middle}
+.credit_shop_li .credit_txt {padding-left:32px;position:relative}
+.credit_shop_li .credit_txt:before {content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:24px;background:rgba(255, 255, 255, 0.16)}
+.credit_shop_li .credit_txt strong {display:block;font-size:20px;font-weight:700;color:#fff;line-height:24px}
+.credit_shop_li .credit_txt strong del {display:inline-block;margin:-4px 1px 0 0;font-size:14px;font-weight:400;color:rgba(255, 255, 255, 0.64);line-height:17px;vertical-align:middle}
+.credit_shop_li .credit_txt span {display:block;margin-top:2px;font-size:14px;font-weight:400;color:rgba(255, 255, 255, 0.87);line-height:20px}
+.credit_shop_li .credit_money {font-weight:400;color:#ff2d55}
+.credit_shop_li .credit_money strong {display:inline-block;margin-top:-5px;font-size:20px;line-height:32px;vertical-align:middle}
+.credit_shop_li .credit_money + .btn_ssm3 {margin-left:42px}
+.noti_box {margin:62px 0 0 7px}
+.noti_box .tit {font-weight:500;line-height:19px}
+
+.coupon_info > .txt {font-size:20px;font-weight:500;line-height:29px;letter-spacing:-1px;text-align:center}
+.coupon_detail {margin-top:12px}
+.coupon_detail li {-webkit-display:flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;padding:12px 0}
+.coupon_detail li + li {border-top:1px solid rgba(255, 255, 255, 0.08)}
+.coupon_detail li p {font-size:18px;font-weight:400;color:rgba(255, 255, 255, 0.64)}
+.coupon_detail li .txt {font-weight:500}
+
+/* popup */
+.pop_wrap {position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0, 0, 0, 0.6);z-index:99}
+.pop_inner {position:fixed;left:50%;top:50%;transform:translate(-50%, -50%);width:540px;padding:32px 32px 88px 32px;border-radius:20px;overflow:hidden}
+.pop_header {position:relative;height:38px}
+.pop_header_tit {font-size:24px;font-weight:500;line-height:38px;letter-spacing:-1px}
+.pop_btn_close {position:absolute;top:0;right:0;width:40px;height:38px;background:url('../images/icon_close.png') no-repeat center / 18px}
+.pop_cont {height:391px;margin-right:-26px;padding-right:22px}
+.pop_footer {position:absolute;bottom:0;left:0;right:0;height:78px;padding:16px 32px}
+.pop_footer:after {content:'';display:block;clear:both}
+.pop_footer .txt {float:left;margin-top:10px;font-size:14px;font-weight:400;line-height:26px}
+.pop_footer .pop_btns {-webkit-display:flex;display:flex;float:right}
+.pop_btns button + button {margin-left:8px}
+
+.pop_wrap.ty2 .pop_inner {width:450px;height:507px;padding:32px}
+.pop_wrap.ty2 .pop_cont {height:405px}
+
+.pop_wrap.auto .pop_cont {height:100%;max-height:391px}
+.pop_wrap.auto .scroll::-webkit-scrollbar {display:none}
+

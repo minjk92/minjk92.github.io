@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>크레딧 샵</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
+    <script type="text/javascript" src="../resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="header_inner">
+                <h1 class="header_logo">
+                    <a href="#none"><img src="../resource/images/logo.png" alt="AZ APLAYZ Beta"></a>
+                </h1>
+                <div class="header_util">
+                    <button type="button" class="header_btn_credit">3000</button>
+                    <button type="button" class="header_btn_alram new"><span class="blind">공지</span></button><!-- .new class : 새 공지 -->
+                    <button type="button" class="header_btn_menu"><span class="blind">메뉴</span></button>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <h2 class="tit_h1">크레딧 샵</h2>
+            <div class="contents">
+                <div class="cont_box gradient credit_box ty3">
+                    <div class="credit_total">
+                        <p class="tit">현재 보유 크레딧</p>
+                        <p class="credit">3000</p>
+                    </div>
+                    <div class="credit_all">
+                        <p class="tit">누적 구매 크레딧</p>
+                        <p class="credit">13,000</p>
+                    </div>
+                </div>
+                <div class="tab_wrap">
+                    <ul class="tab_list">
+                        <li><a href="#none">크레딧 충전</a></li><!-- 활성화시 on class 추가 -->
+                        <li class="on"><a href="#none">충전내역</a></li>
+                        <li><a href="#none">사용내역</a></li>
+                    </ul>
+                    <button type="button" class="btn_icon_plus">쿠폰등록</button>
+                </div>
+                <div class="cont_box gradient box_ty1 pb30">
+                    <!-- 2022-06-08 div.scroll 영역 삭제 -->
+                    <div class="tbl_list ty4">
+                        <table>
+                            <caption>구매일자, 구분, 충전된 크레딧, 금액에 관한 표</caption>
+                            <colgroup>
+                                <col style="width:140px">
+                                <col style="width:140px">
+                                <col style="width:*">
+                                <col style="width:150px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구매일자</th>
+                                    <th scope="col" class="tc">구분</th>
+                                    <th scope="col">충전된 크레딧</th>
+                                    <th scope="col">금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>22.02.01</td>
+                                    <td class="tc">구매</td>
+                                    <td class="pl35"><p class="credit fz24">5</p></td>
+                                    <td class="fc_rd">50,000원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="noti_box">
+                    <p class="tit">유의사항</p>
+                    <ul class="dot_list">
+                        <li>PC, 안드로이드폰, 아이폰, 태블릿 등에서 이용 가능합니다.</li>
+                        <li>미성년자가 구매하는 경우, 법정대리인이 동의하지 않으면 미성년자 또는 법정대리인이 구매를 취소할 수 있습니다.</li>
+                        <li>상기 금액은 VAT 미포함 금액입니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

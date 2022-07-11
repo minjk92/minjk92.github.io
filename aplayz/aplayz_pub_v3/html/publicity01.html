@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>홍보현황</title>
+    <link rel="stylesheet" type="text/css" href="../resource/css/style.css">
+    <script type="text/javascript" src="../resource/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header" id="header">
+            <div class="header_inner">
+                <h1 class="header_logo">
+                    <a href="#none"><img src="../resource/images/logo.png" alt="AZ APLAYZ Beta"></a>
+                </h1>
+                <div class="header_util">
+                    <button type="button" class="header_btn_credit">3000</button>
+                    <button type="button" class="header_btn_alram new"><span class="blind">공지</span></button><!-- .new class : 새 공지 -->
+                    <button type="button" class="header_btn_menu"><span class="blind">메뉴</span></button>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <h2 class="tit_h1">홍보현황</h2>
+            <div class="contents">
+                <div class="tab_wrap">
+                    <ul class="tab_list">
+                        <li class="on"><a href="#none">대기 3</a></li>
+                        <li><a href="#none">진행 3</a></li>
+                        <li><a href="#none">완료 3</a></li>
+                    </ul>
+                    <div class="form_box srch_box ty2">
+                        <input type="text" placeholder="가수 또는 곡명을 검색하세요.">
+                        <button type="button" class="btn_srch"><span class="blind">검색</span></button>
+                    </div>
+                </div>
+                <div class="cont_wrap">
+                    <div class="cont_box gradient box_ty1">
+                        <!-- 2022-06-08 div.scroll 영역 삭제 -->
+                        <div class="tbl_list ty1">
+                            <table>
+                                <caption>홍보상태, 곡/가수, 사용 크레딧, 신청일시, 홍보예정시간에 관한 표</caption>
+                                <colgroup>
+                                    <col style="width:140px">
+                                    <col style="width:*">
+                                    <col style="width:220px">
+                                    <col style="width:200px">
+                                    <col style="width:200px">
+                                    <col style="width:144px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">상태</th>
+                                        <th scope="col" class="tl">곡/가수</th>
+                                        <th scope="col">사용 크레딧
+                                            <button type="button" class="tooltip"><span class="blind">안내</span></button>
+                                        </th>
+                                        <th scope="col">신청일시</th>
+                                        <th scope="col">홍보예정시간</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="label_gray">심사완료</span>
+                                        </td>
+                                        <td class="tbl_song_tit tl">
+                                            <p class="song_img"><img src="../resource/images/thumbnail/thumbnail02.png" alt=""></p>
+                                            <p class="song_tit">곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL</p>
+                                            <p class="song_name">Artist</p>
+                                        </td>
+                                        <td>
+                                            <p class="credit">1</p>
+                                        </td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td>
+                                            <button class="btn_sm1 btn_rd">바로홍보</button><!-- 비활성일시 disabled 속성 추가 -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="label_gray">심사완료</span>
+                                        </td>
+                                        <td class="tbl_song_tit tl">
+                                            <p class="song_img"><img src="../resource/images/thumbnail/thumbnail02.png" alt=""></p>
+                                            <p class="song_tit">곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL</p>
+                                            <p class="song_name">Artist</p>
+                                        </td>
+                                        <td>
+                                            <p class="credit">1</p>
+                                        </td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button class="btn_sm1 btn_rd">바로홍보</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="label_green">심사중</span>
+                                        </td>
+                                        <td class="tbl_song_tit tl">
+                                            <p class="song_img"><img src="../resource/images/thumbnail/thumbnail02.png" alt=""></p>
+                                            <p class="song_tit">곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL</p>
+                                            <p class="song_name">Artist</p>
+                                        </td>
+                                        <td>
+                                            <p class="credit">1</p>
+                                        </td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button class="btn_sm1 btn_rd">바로홍보</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="label_green">심사중</span>
+                                        </td>
+                                        <td class="tbl_song_tit tl">
+                                            <p class="song_img"><img src="../resource/images/thumbnail/thumbnail02.png" alt=""></p>
+                                            <p class="song_tit">곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL</p>
+                                            <p class="song_name">Artist</p>
+                                        </td>
+                                        <td>
+                                            <p class="credit">1</p>
+                                        </td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td>-</td>
+                                        <td>
+                                            <button class="btn_sm1 btn_line">취소</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="label_red">승인거절</span>
+                                        </td>
+                                        <td class="tbl_song_tit tl">
+                                            <p class="song_img"><img src="../resource/images/thumbnail/thumbnail02.png" alt=""></p>
+                                            <p class="song_tit">곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL</p>
+                                            <p class="song_name">Artist</p>
+                                        </td>
+                                        <td>
+                                            <p class="credit">1</p>
+                                        </td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td>
+                                            <button class="txt_btn mr10">거절사유</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="label_red">승인거절</span>
+                                        </td>
+                                        <td class="tbl_song_tit tl">
+                                            <p class="song_img"><img src="../resource/images/thumbnail/thumbnail02.png" alt=""></p>
+                                            <p class="song_tit">곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL 곁에있어줘, 쏠헤르메스SOL</p>
+                                            <p class="song_name">Artist</p>
+                                        </td>
+                                        <td>
+                                            <p class="credit">1</p>
+                                        </td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td><span>02.01</span> <span>08:11</span></td>
+                                        <td>
+                                            <button class="txt_btn mr10">거절사유</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

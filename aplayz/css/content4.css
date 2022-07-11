@@ -2097,7 +2097,7 @@ body {width:100%; background:#151515;}
 
   .mymusic_content ul li {display: flex; align-items: center;}
   .mymusic_content ul li:first-child div{margin-right: 4vw;}
-  .mymusic_content ul li:first-child div p{color: rgba(255, 255, 255); line-height:1.4; font-size:14px; font-weight:300; overflow:hidden; text-overflow: ellipsis;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;}
+  .mymusic_content ul li:first-child div p{color: rgba(255, 255, 255); line-height:1.4; font-size:16px; font-weight:300; overflow:hidden; text-overflow: ellipsis;  -webkit-line-clamp: 1; -webkit-box-orient: vertical;}
   .mymusic_content ul li div:last-child{font-size:14px;color: rgba(255, 255, 255, 0.6);}
   .mymusic_content ul li div:last-child {color: rgba(255, 255, 255, 0.87);}
   .mymusic_content ul li div p.artist{font-size:14px;color: rgba(255, 255, 255, 0.6); font-weight: 300;}
@@ -2106,7 +2106,7 @@ body {width:100%; background:#151515;}
   .mymusic_content ul li:nth-child(2) div img {width: 18px;}
 
   /*select_box_custom*/
-  .mymusic_h {margin: 16px auto;}
+  .mymusic_h {margin: 20px auto;}
   .select_box2 {display:flex; justify-content:space-between; align-items:center;background: #2a2a2a; border-radius:8px; width: 90%;}
   .mymusic_h .select-box-area {position: relative; width:100%;border-radius:}
 

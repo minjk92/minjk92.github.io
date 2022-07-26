@@ -52,7 +52,7 @@ $(document).ready(function () {
                         console.log("372.1953125 high");
                         $('#nav').attr('style', "display:block;");
                     } else if (titleVw < 374.1953125) {
-                        $('#nav').attr('style', "display:none;");
+                        $('#nav').attr('style', "display:block;");
                     }
                 } else {
                     $('.title_box').removeClass('scroll');
@@ -203,16 +203,16 @@ $(document).ready(function () {
         }
     }).resize();
 
-      /* Scrolltop gnbmenu */
-      $(window).scroll(function(){
-        var scrollT = $(window).scrollTop();
+    //   /* Scrolltop gnbmenu 7/26 주석처리함*/
+    //   $(window).scroll(function(){
+    //     var scrollT = $(window).scrollTop();
 
-        if(scrollT > 700) {
-           $("#nav .gnb > ul").addClass('active');
-        } else{
-            $("#nav .gnb > ul").removeClass('active');
-        }
-    });
+    //     if(scrollT > 700) {
+    //        $("#nav .gnb > ul").addClass('active');
+    //     } else{
+    //         $("#nav .gnb > ul").removeClass('active');
+    //     }
+    // });
 
 
 

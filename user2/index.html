@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
     <title>aplayz event main - local -</title>
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -23,6 +23,14 @@
              var console = { log: function() {} };
         </script>
     <![endif]-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var video = document.getElementById("video");
+            video.play();
+        });
+
+        
+    </script>
 </head>
 
 <body>
@@ -50,14 +58,14 @@
             <div id="content">
                 <!-- 7/26 Main Video -->
                 <div class="section_video">
-                    <video width="100%" autoplay loop muted poster="images/video_poster.png" class="main_preview">
-                        <source src="images/aplayz_official.mp4" type="video/mp4">
+                    <video width="100%" autoplay loop muted poster="images/video_poster.png" class="main_preview" id="video">
+                        <source src="images/aplayzofficial.mp4" type="video/mp4">
                         브라우저에서는 비디오를 지원하지 않습니다.
                     </video>
                     <div class="main_dim"></div>
                     <div class="ev_main_con ev_main_con01  wow fadeInUp">
                         <div class="title_box">
-                            <div class="title_bg"></div>
+                            <div class="title_bg">
                                 <div class="title">
                                     <div class="main_title"><h2>세상 모든 공간을 <br class="m_br"></h2><h3><img src="images/ev_main_con01_logo.png" alt=""></h3><h2>하라!</h2></div>
                                         <ul>
@@ -74,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+               
                 <!-- end -->
 
 
@@ -154,7 +162,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
+        
         <div id="footer">
             <div class="ft_inr">
                 <div class="ft_top cf">

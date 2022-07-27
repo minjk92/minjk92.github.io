@@ -12,14 +12,16 @@
 .cf:after{content: '';display: block;clear: both;height: 0;}
 #wrap{position: relative;width: 100%;}
 
-
+/* 7/26 edit */
 /* 상단 */
 .main02 #header{position: absolute;top: 0;left: 0;z-index: 1000;}
 #header{width: 100%;height: 80px;line-height: 80px;}
 
 #header.fix{position: fixed; z-index: 9999; }
-.main01 #header.fix{background: rgba(0,0,0,.0);-webkit-backdrop-filter: blur(0px);-o-backdrop-filter: blur(100px);-ms-backdrop-filter: blur(100px);-moz-backdrop-filter: blur(100px);backdrop-filter: blur(100px);}
-
+/* main01 #header.fix > action.js 수정된 부분있습니다. */
+.main01 #header.fix {background:transparent; -webkit-backdrop-filter: blur(0px);-o-backdrop-filter: blur(0px);-ms-backdrop-filter: blur(0px);-moz-backdrop-filter: blur(0px);backdrop-filter: blur(0px);}
+.main01 #header.fix.active{background: rgba(0,0,0,.6);-webkit-backdrop-filter: blur(10px);-o-backdrop-filter: blur(10px);-ms-backdrop-filter: blur(10px);-moz-backdrop-filter: blur(10px);backdrop-filter: blur(10px);}
+/* 7/26 end */
 
 
 .hd_inr{position: relative;height: 80px;margin: 0 80px;z-index: 9999;}

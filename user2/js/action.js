@@ -203,16 +203,16 @@ $(document).ready(function () {
         }
     }).resize();
 
-    //   /* Scrolltop gnbmenu 7/26 주석처리함*/
-    //   $(window).scroll(function(){
-    //     var scrollT = $(window).scrollTop();
+      /* Scrolltop gnbmenu 7/26 edit*/
+      $(window).scroll(function(){
+        var scrollT = $(window).scrollTop();
 
-    //     if(scrollT > 700) {
-    //        $("#nav .gnb > ul").addClass('active');
-    //     } else{
-    //         $("#nav .gnb > ul").removeClass('active');
-    //     }
-    // });
+        if(scrollT > 700) {
+           $(".main01 #header.fix").addClass('active');
+        } else{
+            $(".main01 #header.fix").removeClass('active');
+        }
+    });
 
 
 

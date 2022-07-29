@@ -71,9 +71,9 @@
 #footer .ft_inr .ft_top .ft_sns li:first-child a{margin-left: 0;}
 #footer .ft_inr .ft_top .ft_sns li a img{width: 100%;opacity: .6;vertical-align: middle;}
 
-#footer .ft_inr .ft_info{position: relative;height: 58px;margin-top: 30px;}
-#footer .ft_inr .ft_info address{position: absolute;top: 0;left: 0;font-size: 0;font-style: normal;vertical-align: bottom;}
 /* 7/29 */
+#footer .ft_inr .ft_info{position: relative;height: 58px;}
+#footer .ft_inr .ft_info address{position: absolute;top: 0;left: 0;font-size: 0;font-style: normal;vertical-align: bottom;}
 #footer .ft_inr .ft_info address p{margin: 12px 1.667vw 0 0;font-size: 14px;color: rgba(255,255,255,0.6);line-height: 23px;letter-spacing: -0.005em;}
 #footer .ft_inr .ft_info address .corp_addr{margin: 0;}
 #footer .ft_inr .ft_info address .corp_name{display: inline-block;}

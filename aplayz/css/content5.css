@@ -823,6 +823,7 @@ body {width:100%; background:#151515;}
 .bplayer > div.dim{position:absolute; top:0; left:0; background:rgba(0,0,0,0.8); width:100%; height: 100%; z-index: 3;}
 .bplayer > div.dim > div {display: flex; align-items: center; justify-content: center; flex-direction: column;}
 .bplayer > div.dim > div img{width: 32px; height: 32px;}
+.bplayer > div.dim > div p{font-size:13px; font-weight: 400;}
 
 .bplayer > div {display: flex; justify-content: center; align-items: center;}
 .bplayer > div svg {padding-right: 8px;}

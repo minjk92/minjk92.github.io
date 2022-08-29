@@ -1474,7 +1474,7 @@ body {width:100%; background:#151515;}
 /*space4_4*/
 .main.space4_4 {width:100%; padding-top:200px;}
 .space4_4 .main_box {width:100%; margin:0 auto; max-width:940px;}
-.space4_4 h3 {color: #fff; font-size:38px;line-height:1.6;text-align:center;}
+.space4_4 h3 {color: #fff; font-size:38px;line-height:1.4;text-align:center;}
 .space4_4 h3 span {padding:0 12px; background:rgba(255,255,255,0.11);font-weight:500; border-radius:4px;}
 .loading_ing {position:relative; display:flex;flex-direction:column;justify-content:center; align-items:center;}
 .loading_ing > div {display:block; position:relative;margin:100px 0 50px;}

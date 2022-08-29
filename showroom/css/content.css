@@ -50,12 +50,13 @@ body {width:100%; background:#ffffff;}
 
 
 /*finish*/
-.finish_box {width:100%;padding-top:6%;}
-.finish_box {width:540px; margin:0 auto;display:flex; flex-direction:column; padding-top:10%;}
+/* 8/11 수정 */
+.finish_box {width:100%;}
+.finish_box {width:580px; margin:0 auto;display:flex; flex-direction:column; padding-top:14%;}
 .finish_box div {margin:0 auto;}
 .finish_box h1 {margin:32px 0; color:#151515; font-weight:700; font-size:38px; margin-bottom:32px;text-align:center;}
 .finish_box h3 {color:#fff; font-size:28px; font-weight:500;text-align:center;}
-.finish_box span {font-weight:700; font-size:px;}
+.finish_box span {font-weight:700; color:#012c5f; margin-right: 6px;}
 .finish_box p {color: rgba(0, 0, 0, 0.64);text-decoration:none; font-size:20px; margin:8px 0 24px;text-align:center;}
 .finish_box p > span {font-size:20px;}
   
@@ -99,7 +100,7 @@ body {width:100%; background:#ffffff;}
 .form_bottom button {width:100%; height:60px; border-radius:0px; background: #012c5f; color:#fff; font-size:16px; line-height:60px;font-weight:500; transition:all 0.3s;}
 
 .form_bottom_box { display:flex; justify-content:space-between; align-items:center;width:100%; max-width:940px; margin:0 auto;}
-.form_text {width:100%; display:flex; justify-content:space-between; align-items:center; margin:42px 0 8px;}
+.form_text {width:100%; display:flex; justify-content:space-between; align-items:center; margin:22px 0 8px;}
 .form_text h3 {color:#151515; font-size:28px;font-weight:700;}
 .space_1 button {margin-left:16px;}
 

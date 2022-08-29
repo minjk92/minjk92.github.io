@@ -30,7 +30,7 @@ body {width:100%; background:#151515;}
 ::-webkit-scrollbar-track {background:#ccc;}
 
 /*content_scroll_motion*/
-.fade-up {animation:fade-up 1.5s ease forwards;}
+.fade-up2 {animation:fade-up 1.5s ease forwards;}
 @keyframes fade-up {
     0% {opacity:0;transform:translate(0,50px);}
     10% {opacity:0;}
